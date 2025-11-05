@@ -1,9 +1,17 @@
-from flask import Flask, request, jsonify, render_template
-from functools import wraps
-import pandas as pd
-from datetime import datetime, timedelta
-import logging
 import os
+import logging
+from functools import wraps
+from datetime import datetime, timedelta
+import pandas as pd
+from flask import Flask, request, jsonify, render_template, send_from_directory
+
+# Initialize Flask app
+app = Flask(__name__, static_folder='static', template_folder='templates')
+
+# Serve static files
+@app.route('/static/<path:path>')
+def serve_static(path):
+    return send_from_directory('static', path)
 
 # Ensure required directories exist
 os.makedirs("static", exist_ok=True)
@@ -18,8 +26,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Flask App Initialization
-app = Flask(__name__)
+# Configuration
 
 # Configuration
 CSV_FILE = os.path.join('data', 'attendance.csv')
@@ -248,5 +255,6 @@ if __name__ == '__main__':
         with open(CSV_FILE, 'w') as f:
             f.write("date,name,type,points,total_points,price\n")
     
-    logger.info("Starting Tiffin Tracker server...")
-    app.run(debug=True, port=5000)
+    # Start the server
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
