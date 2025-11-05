@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiffin Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+            font-weight: bold;
+        }
+        input, select {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #message {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+        }
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+            border: 1px solid #ebccd1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .total-row {
+            font-weight: bold;
+            background-color: #f8f8f8;
+        }
+        .summary-section {
+            margin-top: 30px;
+        }
+        .action-buttons {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tiffin Tracker</h1>
+    
+    <form id="entryForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="tiffin_type">Tiffin Type:</label>
+            <select id="tiffin_type" name="tiffin_type" required>
+                <option value="half">Half (₹60)</option>
+                <option value="full">Full (₹80)</option>
+            </select>
+        </div>
+        <button type="submit">Add Entry</button>
+    </form>
+
+    <div id="message"></div>
+
+    <div class="summary-section">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="weekly">This Week</button>
+            <button class="tab-button" data-tab="complete">All Time</button>
+        </div>
+        
+        <div id="weeklySummary" class="tab-content active">
+            <h3>This Week's Summary</h3>
+            <div id="weeklySummaryContent">Loading...</div>
+        </div>
+        
+        <div id="completeSummary" class="tab-content">
+            <h3>Complete Summary</h3>
+            <div id="completeSummaryContent">Loading...</div>
+        </div>
+        
+        <div class="action-buttons">
+            <button id="refreshSummary">🔄 Refresh Summary</button>
+            <button id="downloadCsv">💾 Download Complete CSV</button>
+        </div>
+    </div>
+
+    <style>
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab-button {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #666;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab-button.active {
+            color: #4CAF50;
+            border-bottom-color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 15px 0;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .summary-total {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f8f8f8;
+            font-weight: bold;
+            text-align: right;
+        }
+    </style>
+
+    <script>
+        // Function to show message
+        function showMessage(message, isError = false) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = message;
+            messageDiv.className = isError ? 'error' : 'success';
+            messageDiv.style.display = 'block';
+            
+            // Auto-hide after 3 seconds if not an error
+            if (!isError) {
+                setTimeout(() => {
+                    messageDiv.style.display = 'none';
+                }, 3000);
+            }
+        }
+
+        // Function to render summary table
+        function renderSummary(data, containerId) {
+            const container = document.getElementById(containerId);
+            if (!data || data.length === 0) {
+                container.innerHTML = "<p>No data available</p>";
+                return;
+            }
+            
+            let html = `
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Half Tiffins</th>
+                        <th>Full Tiffins</th>
+                        <th>Total Tiffins</th>
+                        <th>Total Price (₹)</th>
+                    </tr>`;
+            
+            // Add each person's data
+            data.forEach(row => {
+                html += `
+                    <tr>
+                        <td>${row.name}</td>
+                        <td>${row.half_count || 0}</td>
+                        <td>${row.full_count || 0}</td>
+                        <td>${row.total_tiffins || 0}</td>
+                        <td>₹${(row.total_price || 0).toFixed(2)}</td>
+                    </tr>`;
+            });
+            
+            // Add total row
+            const totalHalf = data.reduce((sum, row) => sum + (parseInt(row.half_count) || 0), 0);
+            const totalFull = data.reduce((sum, row) => sum + (parseInt(row.full_count) || 0), 0);
+            const totalTiffins = data.reduce((sum, row) => sum + (parseInt(row.total_tiffins) || 0), 0);
+            const totalPrice = data.reduce((sum, row) => sum + (parseFloat(row.total_price) || 0), 0);
+            
+            html += `
+                <tr class="total-row">
+                    <td>TOTAL</td>
+                    <td>${totalHalf}</td>
+                    <td>${totalFull}</td>
+                    <td>${totalTiffins}</td>
+                    <td>₹${totalPrice.toFixed(2)}</td>
+                </tr>
+            </table>`;
+            
+            container.innerHTML = html;
+            
+            // Add total summary below the table
+            container.innerHTML += `
+                <div class="summary-total">
+                    Total Amount: ₹${totalPrice.toFixed(2)}
+                </div>`;
+        }
+
+        // Function to load and display the price summaries
+        async function loadPriceSummary() {
+            try {
+                document.getElementById('weeklySummaryContent').innerHTML = 'Loading...';
+                document.getElementById('completeSummaryContent').innerHTML = 'Loading...';
+                
+                const response = await fetch("{{ url_for('get_summary') }}");
+                const data = await response.json();
+                
+                if (response.ok) {
+                    // Render weekly summary
+                    if (data.weekly_summary && data.weekly_summary.length > 0) {
+                        renderSummary(data.weekly_summary, 'weeklySummaryContent');
+                    } else {
+                        document.getElementById('weeklySummaryContent').innerHTML = "<p>No data available for this week.</p>";
+                    }
+                    
+                    // Render complete summary
+                    if (data.complete_summary && data.complete_summary.length > 0) {
+                        renderSummary(data.complete_summary, 'completeSummaryContent');
+                    } else {
+                        document.getElementById('completeSummaryContent').innerHTML = "<p>No data available.</p>";
+                    }
+                } else {
+                    throw new Error(data.error || 'Failed to load summary');
+                }
+            } catch (error) {
+                console.error('Error loading summary:', error);
+                showMessage('Error loading summary: ' + error.message, true);
+                document.getElementById('weeklySummaryContent').innerHTML = "<p>Error loading data. Please try again.</p>";
+                document.getElementById('completeSummaryContent').innerHTML = "";
+            }
+        }
+
+        // Function to handle form submission
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const type = document.getElementById('tiffin_type').value;
+            
+            if (!name) {
+                showMessage('Please enter a name', true);
+                return;
+            }
+
+            try {
+                const response = await fetch("{{ url_for('add_entry') }}", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        type: type
+                    })
+                });
+
+                const result = await response.json();
+                
+                if (response.ok) {
+                    showMessage('Entry added successfully!');
+                    document.getElementById('name').value = ''; // Clear only the name field
+                    await loadPriceSummary(); // Refresh the summary
+                } else {
+                    throw new Error(result.error || 'Failed to add entry');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showMessage('Error: ' + error.message, true);
+            }
+        }
+
+        // Function to switch between tabs
+        function setupTabs() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    button.classList.add('active');
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId + 'Summary').classList.add('active');
+                });
+            });
+        }
+
+        // Add event listeners when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set up tab switching
+            setupTabs();
+            
+            // Load initial data
+            loadPriceSummary();
+            
+            // Form submission
+            const form = document.getElementById('entryForm');
+            if (form) {
+                form.addEventListener('submit', handleFormSubmit);
+            }
+            
+            // Refresh button
+            const refreshButton = document.getElementById('refreshSummary');
+            if (refreshButton) {
+                refreshButton.addEventListener('click', loadPriceSummary);
+            }
+            
+            // Download CSV button
+            const downloadCsvButton = document.getElementById('downloadCsv');
+            if (downloadCsvButton) {
+                downloadCsvButton.addEventListener('click', async () => {
+                    try {
+                        const response = await fetch("{{ url_for('get_summary') }}");
+                        const data = await response.json();
+                        
+                        if (response.ok && data.csv) {
+                            const blob = new Blob([data.csv], { type: 'text/csv' });
+                            const url = URL.createObjectURL(blob);
+                            const a = document.createElement('a');
+                            a.href = url;
+                            const today = new Date().toISOString().split('T')[0];
+                            a.download = `tiffin_summary_${today}.csv`;
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                            URL.revokeObjectURL(url);
+                        } else {
+                            throw new Error(data.error || 'Failed to download CSV');
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        showMessage('Error downloading CSV: ' + error.message, true);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

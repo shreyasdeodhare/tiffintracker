@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weekly Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Weekly Summary 🗓</h1>
+    <a href="{{ url_for('index') }}">🏠 Home</a> |
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if weekly_data %}
+        {% for week in weekly_data %}
+            <h2>Week {{ week.week }}</h2>
+            <table border="1" cellpadding="8">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Total (₹)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for person in week.people %}
+                    <tr>
+                        <td>{{ person.name }}</td>
+                        <td>{{ person.total }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <p><strong>Week Total:</strong> ₹{{ week.total }}</p>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>No weekly data available yet.</p>
+    {% endif %}
+</body>
+</html>

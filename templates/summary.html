@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monthly Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Monthly Summary 📅</h1>
+    <a href="{{ url_for('index') }}">🏠 Home</a> |
+    <a href="{{ url_for('weekly_summary') }}">🗓 Weekly Summary</a>
+
+    {% if summary_data %}
+    <table border="1" cellpadding="8">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Total (₹)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in summary_data %}
+            <tr>
+                <td>{{ row.name }}</td>
+                <td>{{ row.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h3>Overall Total: ₹{{ total }}</h3>
+    {% else %}
+    <p>No data yet.</p>
+    {% endif %}
+</body>
+</html>

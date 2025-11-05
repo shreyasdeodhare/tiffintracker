@@ -1,0 +1,1021 @@
+2025-10-19 12:21:50,962 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 12:21:50,962 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-19 12:21:50,965 - INFO -  * Restarting with stat
+2025-10-19 12:21:53,187 - WARNING -  * Debugger is active!
+2025-10-19 12:21:53,196 - INFO -  * Debugger PIN: 336-246-015
+2025-10-19 12:26:49,690 - INFO - 127.0.0.1 - - [19/Oct/2025 12:26:49] "GET / HTTP/1.1" 200 -
+2025-10-19 12:26:49,922 - INFO - 127.0.0.1 - - [19/Oct/2025 12:26:49] "GET /static/style.css HTTP/1.1" 200 -
+2025-10-19 12:26:49,972 - INFO - 127.0.0.1 - - [19/Oct/2025 12:26:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-19 12:27:01,237 - INFO - Added record for Shreyas  (half) on 2025-10-19
+2025-10-19 12:27:01,238 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:01] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 12:27:01,296 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:01] "GET / HTTP/1.1" 200 -
+2025-10-19 12:27:01,313 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:27:16,456 - INFO - Added record for Saurabh (half) on 2025-10-19
+2025-10-19 12:27:16,456 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:16] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 12:27:16,496 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:16] "GET / HTTP/1.1" 200 -
+2025-10-19 12:27:16,515 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:27:36,658 - INFO - Added record for Sajeed (half) on 2025-10-19
+2025-10-19 12:27:36,659 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:36] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 12:27:36,702 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:36] "GET / HTTP/1.1" 200 -
+2025-10-19 12:27:36,727 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:27:42,014 - INFO - Added record for Saumya (half) on 2025-10-19
+2025-10-19 12:27:42,014 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:42] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 12:27:42,045 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:42] "GET / HTTP/1.1" 200 -
+2025-10-19 12:27:42,065 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:27:57,957 - INFO - Added record for Aditya (half) on 2025-10-19
+2025-10-19 12:27:57,957 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:57] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 12:27:57,992 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:57] "GET / HTTP/1.1" 200 -
+2025-10-19 12:27:58,011 - INFO - 127.0.0.1 - - [19/Oct/2025 12:27:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:28:10,479 - INFO - Added record for Yudhish (full) on 2025-10-19
+2025-10-19 12:28:10,480 - INFO - 127.0.0.1 - - [19/Oct/2025 12:28:10] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 12:28:10,520 - INFO - 127.0.0.1 - - [19/Oct/2025 12:28:10] "GET / HTTP/1.1" 200 -
+2025-10-19 12:28:10,539 - INFO - 127.0.0.1 - - [19/Oct/2025 12:28:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:28:15,092 - INFO - 127.0.0.1 - - [19/Oct/2025 12:28:15] "GET /weekly-summary HTTP/1.1" 200 -
+2025-10-19 12:28:15,107 - INFO - 127.0.0.1 - - [19/Oct/2025 12:28:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:37:50,637 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 12:37:50,637 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-19 12:37:50,640 - INFO -  * Restarting with stat
+2025-10-19 12:37:51,992 - WARNING -  * Debugger is active!
+2025-10-19 12:37:52,013 - INFO -  * Debugger PIN: 336-246-015
+2025-10-19 12:38:46,065 - INFO - 127.0.0.1 - - [19/Oct/2025 12:38:46] "GET /weekly-summary HTTP/1.1" 200 -
+2025-10-19 12:38:46,178 - INFO - 127.0.0.1 - - [19/Oct/2025 12:38:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:38:50,693 - INFO - 127.0.0.1 - - [19/Oct/2025 12:38:50] "GET /weekly-summary HTTP/1.1" 200 -
+2025-10-19 12:38:50,724 - INFO - 127.0.0.1 - - [19/Oct/2025 12:38:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:40:18,400 - INFO - Added record for shreyas (half) on 2025-10-19
+2025-10-19 12:40:18,478 - INFO - Weekly totals updated
+2025-10-19 12:40:18,478 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:18] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 12:40:18,492 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:18] "GET / HTTP/1.1" 200 -
+2025-10-19 12:40:18,511 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:40:28,512 - INFO - Added record for saumya (half) on 2025-10-19
+2025-10-19 12:40:28,591 - INFO - Weekly totals updated
+2025-10-19 12:40:28,592 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:28] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 12:40:28,601 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:28] "GET / HTTP/1.1" 200 -
+2025-10-19 12:40:28,619 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:40:38,235 - INFO - Added record for saurabh (half) on 2025-10-19
+2025-10-19 12:40:38,278 - INFO - Weekly totals updated
+2025-10-19 12:40:38,279 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:38] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 12:40:38,290 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:38] "GET / HTTP/1.1" 200 -
+2025-10-19 12:40:38,311 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:40:46,427 - INFO - Added record for yudhish (half) on 2025-10-19
+2025-10-19 12:40:46,465 - INFO - Weekly totals updated
+2025-10-19 12:40:46,465 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:46] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 12:40:46,476 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:46] "GET / HTTP/1.1" 200 -
+2025-10-19 12:40:46,494 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:40:52,002 - INFO - Added record for aditya (half) on 2025-10-19
+2025-10-19 12:40:52,037 - INFO - Weekly totals updated
+2025-10-19 12:40:52,038 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:52] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 12:40:52,051 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:52] "GET / HTTP/1.1" 200 -
+2025-10-19 12:40:52,070 - INFO - 127.0.0.1 - - [19/Oct/2025 12:40:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 12:41:50,594 - INFO - 127.0.0.1 - - [19/Oct/2025 12:41:50] "GET /weekly-summary HTTP/1.1" 200 -
+2025-10-19 12:41:50,617 - INFO - 127.0.0.1 - - [19/Oct/2025 12:41:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 13:41:24,092 - INFO -  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 13:41:27,531 - INFO -  * Restarting with stat
+2025-10-19 13:41:34,872 - WARNING -  * Debugger is active!
+2025-10-19 13:41:34,888 - INFO -  * Debugger PIN: 336-246-015
+2025-10-19 13:41:34,934 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 13:41:34,935 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-19 13:41:34,937 - INFO -  * Restarting with stat
+2025-10-19 13:41:36,843 - WARNING -  * Debugger is active!
+2025-10-19 13:41:36,853 - INFO -  * Debugger PIN: 336-246-015
+2025-10-19 13:43:55,780 - INFO - 127.0.0.1 - - [19/Oct/2025 13:43:55] "GET / HTTP/1.1" 200 -
+2025-10-19 13:43:55,996 - INFO - 127.0.0.1 - - [19/Oct/2025 13:43:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 13:44:02,571 - INFO - Added record for Aditya (half) on 2025-10-19
+2025-10-19 13:44:02,652 - INFO - Weekly totals updated
+2025-10-19 13:44:02,652 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:02] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 13:44:02,666 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:02] "GET / HTTP/1.1" 200 -
+2025-10-19 13:44:02,686 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 13:44:09,017 - INFO - Added record for Shreyas (half) on 2025-10-19
+2025-10-19 13:44:09,052 - INFO - Weekly totals updated
+2025-10-19 13:44:09,053 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:09] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 13:44:09,062 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:09] "GET / HTTP/1.1" 200 -
+2025-10-19 13:44:09,079 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 13:44:17,198 - INFO - Added record for Sajeed (half) on 2025-10-19
+2025-10-19 13:44:17,241 - INFO - Weekly totals updated
+2025-10-19 13:44:17,242 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:17] "[32mPOST /add HTTP/1.1[0m" 302 -
+2025-10-19 13:44:17,254 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:17] "GET / HTTP/1.1" 200 -
+2025-10-19 13:44:17,274 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 13:44:20,845 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:20] "GET /weekly-summary HTTP/1.1" 200 -
+2025-10-19 13:44:20,868 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 13:44:36,242 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 13:44:36,270 - INFO - 127.0.0.1 - - [19/Oct/2025 13:44:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:35:44,229 - INFO -  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 18:35:44,414 - INFO -  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 18:35:45,652 - INFO -  * Restarting with stat
+2025-10-19 18:35:45,684 - INFO -  * Restarting with stat
+2025-10-19 18:35:48,379 [WARNING] -  * Debugger is active!
+2025-10-19 18:35:48,394 [INFO] -  * Debugger PIN: 336-246-015
+2025-10-19 18:35:48,492 [WARNING] -  * Debugger is active!
+2025-10-19 18:35:48,502 [INFO] -  * Debugger PIN: 336-246-015
+2025-10-19 18:36:24,819 [INFO] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 18:36:24,819 [INFO] - [33mPress CTRL+C to quit[0m
+2025-10-19 18:36:24,822 [INFO] -  * Restarting with stat
+2025-10-19 18:36:26,141 [WARNING] -  * Debugger is active!
+2025-10-19 18:36:26,146 [INFO] -  * Debugger PIN: 336-246-015
+2025-10-19 18:36:59,142 [INFO] - Action started: Display Home Page
+2025-10-19 18:36:59,237 [ERROR] - Error in index: Could not build url for endpoint 'summary'. Did you mean 'weekly_summary' instead?
+2025-10-19 18:36:59,238 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:36:59] "GET / HTTP/1.1" 200 -
+2025-10-19 18:36:59,392 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:36:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:43:39,925 [INFO] - Action started: Display Home Page
+2025-10-19 18:43:40,006 [INFO] - Action completed: Display Home Page
+2025-10-19 18:43:40,008 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:43:40] "GET / HTTP/1.1" 200 -
+2025-10-19 18:43:40,121 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:43:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:43:40,490 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:43:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 18:43:46,549 [INFO] - Action started: Add Entry
+2025-10-19 18:43:46,605 [INFO] - Added entry: Sajeed - half - \u20b960
+2025-10-19 18:43:46,607 [INFO] - Action completed: Add Entry
+2025-10-19 18:43:46,607 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:43:46] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+2025-10-19 18:43:46,619 [INFO] - Action started: Display Home Page
+2025-10-19 18:43:46,643 [INFO] - Action completed: Display Home Page
+2025-10-19 18:43:46,644 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:43:46] "GET / HTTP/1.1" 200 -
+2025-10-19 18:43:46,703 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:43:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 18:43:46,732 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:43:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:43:53,347 [INFO] - Action started: Add Entry
+2025-10-19 18:43:53,353 [INFO] - Added entry: Aditya - half - \u20b960
+2025-10-19 18:43:53,354 [INFO] - Action completed: Add Entry
+2025-10-19 18:43:53,354 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:43:53] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+2025-10-19 18:43:53,365 [INFO] - Action started: Display Home Page
+2025-10-19 18:43:53,395 [INFO] - Action completed: Display Home Page
+2025-10-19 18:43:53,395 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:43:53] "GET / HTTP/1.1" 200 -
+2025-10-19 18:43:53,450 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:43:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 18:43:53,498 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:43:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:44:01,035 [INFO] - Action started: Add Entry
+2025-10-19 18:44:01,043 [INFO] - Added entry: Shreyas - half - \u20b960
+2025-10-19 18:44:01,044 [INFO] - Action completed: Add Entry
+2025-10-19 18:44:01,044 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:01] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+2025-10-19 18:44:01,054 [INFO] - Action started: Display Home Page
+2025-10-19 18:44:01,088 [INFO] - Action completed: Display Home Page
+2025-10-19 18:44:01,088 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:01] "GET / HTTP/1.1" 200 -
+2025-10-19 18:44:01,136 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 18:44:01,177 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:44:06,115 [INFO] - Action started: Add Entry
+2025-10-19 18:44:06,131 [INFO] - Added entry: Saumya - half - \u20b960
+2025-10-19 18:44:06,132 [INFO] - Action completed: Add Entry
+2025-10-19 18:44:06,133 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:06] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+2025-10-19 18:44:06,143 [INFO] - Action started: Display Home Page
+2025-10-19 18:44:06,172 [INFO] - Action completed: Display Home Page
+2025-10-19 18:44:06,172 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:06] "GET / HTTP/1.1" 200 -
+2025-10-19 18:44:06,445 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:44:06,456 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 18:44:18,524 [INFO] - Action started: Add Entry
+2025-10-19 18:44:18,534 [INFO] - Added entry: Yudhish - full - \u20b980
+2025-10-19 18:44:18,534 [INFO] - Action completed: Add Entry
+2025-10-19 18:44:18,534 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:18] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+2025-10-19 18:44:18,545 [INFO] - Action started: Display Home Page
+2025-10-19 18:44:18,580 [INFO] - Action completed: Display Home Page
+2025-10-19 18:44:18,580 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:18] "GET / HTTP/1.1" 200 -
+2025-10-19 18:44:18,618 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 18:44:18,657 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:44:23,420 [INFO] - Action started: Display Weekly Summary
+2025-10-19 18:44:23,472 [ERROR] - Error in weekly_summary: Could not build url for endpoint 'summary'. Did you mean 'weekly_summary' instead?
+2025-10-19 18:44:23,473 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:23] "GET /weekly_summary HTTP/1.1" 200 -
+2025-10-19 18:44:23,547 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:44:35,203 [INFO] - Action started: Display Weekly Summary
+2025-10-19 18:44:35,236 [ERROR] - Error in weekly_summary: Could not build url for endpoint 'summary'. Did you mean 'weekly_summary' instead?
+2025-10-19 18:44:35,236 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:35] "GET /weekly_summary HTTP/1.1" 200 -
+2025-10-19 18:44:35,301 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:44:36,459 [INFO] - Action started: Display Weekly Summary
+2025-10-19 18:44:36,479 [ERROR] - Error in weekly_summary: Could not build url for endpoint 'summary'. Did you mean 'weekly_summary' instead?
+2025-10-19 18:44:36,480 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:36] "GET /weekly_summary HTTP/1.1" 200 -
+2025-10-19 18:44:36,537 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:44:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:45:18,843 [INFO] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 18:45:18,843 [INFO] - [33mPress CTRL+C to quit[0m
+2025-10-19 18:45:18,845 [INFO] -  * Restarting with stat
+2025-10-19 18:45:20,258 [WARNING] -  * Debugger is active!
+2025-10-19 18:45:20,274 [INFO] -  * Debugger PIN: 336-246-015
+2025-10-19 18:47:49,115 [INFO] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 18:47:49,116 [INFO] - [33mPress CTRL+C to quit[0m
+2025-10-19 18:47:49,118 [INFO] -  * Restarting with stat
+2025-10-19 18:47:50,406 [WARNING] -  * Debugger is active!
+2025-10-19 18:47:50,411 [INFO] -  * Debugger PIN: 336-246-015
+2025-10-19 18:48:00,109 [INFO] - Action started: Display Home Page
+2025-10-19 18:48:00,133 [INFO] - Action completed: Display Home Page
+2025-10-19 18:48:00,134 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:48:00] "GET / HTTP/1.1" 200 -
+2025-10-19 18:48:00,183 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:48:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 18:48:00,219 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:48:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:48:07,804 [INFO] - Action started: Add Entry
+2025-10-19 18:48:07,811 [INFO] - Added entry: Yudhish - full - \u20b980
+2025-10-19 18:48:07,812 [INFO] - Action completed: Add Entry
+2025-10-19 18:48:07,812 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:48:07] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+2025-10-19 18:48:07,832 [INFO] - Action started: Display Home Page
+2025-10-19 18:48:07,865 [INFO] - Action completed: Display Home Page
+2025-10-19 18:48:07,865 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:48:07] "GET / HTTP/1.1" 200 -
+2025-10-19 18:48:07,888 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:48:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 18:48:07,946 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:48:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:48:11,733 [INFO] - Action started: Display Weekly Summary
+2025-10-19 18:48:11,754 [INFO] - Action completed: Display Weekly Summary
+2025-10-19 18:48:11,755 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:48:11] "GET /weekly_summary HTTP/1.1" 200 -
+2025-10-19 18:48:11,801 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:48:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 18:48:11,863 [INFO] - 127.0.0.1 - - [19/Oct/2025 18:48:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 18:51:59,628 [INFO] -  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 18:52:00,079 [INFO] -  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 18:52:00,123 [INFO] -  * Restarting with stat
+2025-10-19 18:52:00,640 - INFO -  * Restarting with stat
+2025-10-19 19:13:34 | INFO | Starting Tiffin Tracker API server...
+2025-10-19 19:22:15 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:22:15 | INFO | API Documentation available at: http://localhost:8000/docs
+2025-10-19 19:28:53 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:28:53 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 19:28:53 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 19:28:53 | INFO |  * Restarting with stat
+2025-10-19 19:28:55 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:28:55 | WARNING |  * Debugger is active!
+2025-10-19 19:28:55 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 19:30:37 | INFO | START - index
+2025-10-19 19:30:37 | ERROR | ERROR in index: Could not build url for endpoint 'weekly_summary'. Did you mean 'get_weekly_summary' instead?
+Traceback (most recent call last):
+  File "E:\tiffin-tracker-v2\app.py", line 34, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\tiffin-tracker-v2\app.py", line 141, in index
+    return render_template('index.html')
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\tiffin-tracker-v2\templates\index.html", line 24, in top-level template code
+    <a href="{{ url_for('weekly_summary') }}">\U0001f5d3 Weekly Summary</a>
+    ^^^^^^^^^^^^^^^^^
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'weekly_summary'. Did you mean 'get_weekly_summary' instead?
+2025-10-19 19:30:37 | INFO | 127.0.0.1 - - [19/Oct/2025 19:30:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-19 19:30:38 | INFO | 127.0.0.1 - - [19/Oct/2025 19:30:38] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-19 19:30:38 | INFO | 127.0.0.1 - - [19/Oct/2025 19:30:38] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-19 19:30:39 | INFO | 127.0.0.1 - - [19/Oct/2025 19:30:39] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=EyU0Cp5WWru6mQoqHoLY HTTP/1.1" 200 -
+2025-10-19 19:30:39 | INFO | 127.0.0.1 - - [19/Oct/2025 19:30:39] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-10-19 19:34:44 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:34:44 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 19:34:44 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 19:34:44 | INFO |  * Restarting with stat
+2025-10-19 19:34:46 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:34:46 | WARNING |  * Debugger is active!
+2025-10-19 19:34:46 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 19:35:06 | INFO | START - index
+2025-10-19 19:35:06 | INFO | END - index executed successfully
+2025-10-19 19:35:06 | INFO | 127.0.0.1 - - [19/Oct/2025 19:35:06] "GET / HTTP/1.1" 200 -
+2025-10-19 19:35:06 | INFO | 127.0.0.1 - - [19/Oct/2025 19:35:06] "GET /static/style.css HTTP/1.1" 200 -
+2025-10-19 19:35:07 | INFO | 127.0.0.1 - - [19/Oct/2025 19:35:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-19 19:35:21 | INFO | START - add_entry
+2025-10-19 19:35:21 | ERROR | Failed to add entry: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+Traceback (most recent call last):
+  File "E:\tiffin-tracker-v2\app.py", line 159, in add_entry
+    entry = request.get_json()
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\werkzeug\wrappers\request.py", line 604, in get_json
+    return self.on_json_loading_failed(None)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\flask\wrappers.py", line 214, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\werkzeug\wrappers\request.py", line 647, in on_json_loading_failed
+    raise UnsupportedMediaType(
+    ...<2 lines>...
+    )
+werkzeug.exceptions.UnsupportedMediaType: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-10-19 19:35:21 | INFO | END - add_entry executed successfully
+2025-10-19 19:35:21 | INFO | 127.0.0.1 - - [19/Oct/2025 19:35:21] "[31m[1mPOST /api/entry HTTP/1.1[0m" 400 -
+2025-10-19 19:37:10 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:37:10 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 19:37:10 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 19:37:10 | INFO |  * Restarting with stat
+2025-10-19 19:37:13 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:37:13 | WARNING |  * Debugger is active!
+2025-10-19 19:37:13 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 19:37:25 | INFO | START - index
+2025-10-19 19:37:25 | INFO | END - index executed successfully
+2025-10-19 19:37:25 | INFO | 127.0.0.1 - - [19/Oct/2025 19:37:25] "GET / HTTP/1.1" 200 -
+2025-10-19 19:37:26 | INFO | 127.0.0.1 - - [19/Oct/2025 19:37:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 19:37:37 | INFO | START - add_entry
+2025-10-19 19:37:37 | INFO | START - load_data
+2025-10-19 19:37:37 | INFO | Data loaded successfully with 0 records.
+2025-10-19 19:37:37 | INFO | END - load_data executed successfully
+2025-10-19 19:37:37 | INFO | START - save_data
+2025-10-19 19:37:37 | INFO | Data saved successfully.
+2025-10-19 19:37:37 | INFO | END - save_data executed successfully
+2025-10-19 19:37:37 | INFO | END - add_entry executed successfully
+2025-10-19 19:37:37 | INFO | 127.0.0.1 - - [19/Oct/2025 19:37:37] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 19:37:42 | INFO | START - get_weekly_summary
+2025-10-19 19:37:42 | INFO | START - load_data
+2025-10-19 19:37:42 | INFO | Data loaded successfully with 1 records.
+2025-10-19 19:37:42 | INFO | END - load_data executed successfully
+2025-10-19 19:37:42 | INFO | START - compute_weekly_summary
+2025-10-19 19:37:42 | INFO | END - compute_weekly_summary executed successfully
+2025-10-19 19:37:42 | INFO | END - get_weekly_summary executed successfully
+2025-10-19 19:37:42 | INFO | 127.0.0.1 - - [19/Oct/2025 19:37:42] "GET /api/weekly_summary HTTP/1.1" 200 -
+2025-10-19 19:43:25 | INFO |  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 19:43:26 | INFO |  * Restarting with stat
+2025-10-19 19:52:53 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:52:54 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 19:52:54 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 19:52:54 | INFO |  * Restarting with stat
+2025-10-19 19:52:56 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:52:56 | WARNING |  * Debugger is active!
+2025-10-19 19:52:56 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 19:53:09 | INFO | 127.0.0.1 - - [19/Oct/2025 19:53:09] "GET / HTTP/1.1" 200 -
+2025-10-19 19:53:10 | INFO | 127.0.0.1 - - [19/Oct/2025 19:53:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 19:53:10 | INFO | START - get_weekly_prices
+2025-10-19 19:53:10 | INFO | START - load_data
+2025-10-19 19:53:10 | INFO | Data loaded successfully with 1 records.
+2025-10-19 19:53:10 | INFO | END - load_data executed successfully
+2025-10-19 19:53:10 | ERROR | Failed to generate price summary: 'half_count'
+Traceback (most recent call last):
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'half_count'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\tiffin-tracker-v2\app.py", line 189, in get_weekly_prices
+    csv_data += f"TOTAL,{summary['half_count'].sum()},{summary['full_count'].sum()},{summary['total_tiffins'].sum()},{weekly_total}"
+                         ~~~~~~~^^^^^^^^^^^^^^
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\pandas\core\frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'half_count'
+2025-10-19 19:53:10 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:53:10 | INFO | 127.0.0.1 - - [19/Oct/2025 19:53:10] "[35m[1mGET /api/weekly_prices HTTP/1.1[0m" 500 -
+2025-10-19 19:54:56 | INFO |  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 19:54:56 | INFO |  * Restarting with stat
+2025-10-19 19:56:52 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:56:52 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 19:56:52 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 19:56:52 | INFO |  * Restarting with stat
+2025-10-19 19:56:56 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:56:56 | WARNING |  * Debugger is active!
+2025-10-19 19:56:56 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 19:57:23 | INFO | 127.0.0.1 - - [19/Oct/2025 19:57:23] "GET / HTTP/1.1" 200 -
+2025-10-19 19:57:24 | INFO | 127.0.0.1 - - [19/Oct/2025 19:57:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 19:57:24 | INFO | START - get_weekly_prices
+2025-10-19 19:57:24 | INFO | START - load_data
+2025-10-19 19:57:24 | INFO | Data loaded successfully with 1 records.
+2025-10-19 19:57:24 | INFO | END - load_data executed successfully
+2025-10-19 19:57:24 | ERROR | Failed to generate price summary: Expected numeric dtype, got object instead.
+Traceback (most recent call last):
+  File "E:\tiffin-tracker-v2\app.py", line 174, in get_weekly_prices
+    summary['total_price'] = summary['price'].round(2)
+                             ~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "E:\tiffin-tracker-v2\venv\Lib\site-packages\pandas\core\series.py", line 2821, in round
+    raise TypeError("Expected numeric dtype, got object instead.")
+TypeError: Expected numeric dtype, got object instead.
+2025-10-19 19:57:24 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:57:24 | INFO | 127.0.0.1 - - [19/Oct/2025 19:57:24] "[35m[1mGET /api/weekly_prices HTTP/1.1[0m" 500 -
+2025-10-19 19:58:33 | INFO |  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 19:58:34 | INFO |  * Restarting with stat
+2025-10-19 19:58:38 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:58:38 | WARNING |  * Debugger is active!
+2025-10-19 19:58:38 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 19:58:51 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:58:51 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 19:58:51 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 19:58:51 | INFO |  * Restarting with stat
+2025-10-19 19:58:54 | INFO | Starting Tiffin Tracker server...
+2025-10-19 19:58:54 | WARNING |  * Debugger is active!
+2025-10-19 19:58:54 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 19:58:58 | INFO | 127.0.0.1 - - [19/Oct/2025 19:58:58] "GET / HTTP/1.1" 200 -
+2025-10-19 19:58:58 | INFO | 127.0.0.1 - - [19/Oct/2025 19:58:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 19:58:59 | INFO | START - get_weekly_prices
+2025-10-19 19:58:59 | INFO | START - load_data
+2025-10-19 19:58:59 | INFO | Data loaded successfully with 1 records.
+2025-10-19 19:58:59 | INFO | END - load_data executed successfully
+2025-10-19 19:58:59 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:58:59 | INFO | 127.0.0.1 - - [19/Oct/2025 19:58:59] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:14 | INFO | START - add_entry
+2025-10-19 19:59:14 | INFO | START - load_data
+2025-10-19 19:59:14 | INFO | Data loaded successfully with 1 records.
+2025-10-19 19:59:14 | INFO | END - load_data executed successfully
+2025-10-19 19:59:14 | INFO | START - save_data
+2025-10-19 19:59:14 | INFO | Data saved successfully.
+2025-10-19 19:59:14 | INFO | END - save_data executed successfully
+2025-10-19 19:59:14 | INFO | END - add_entry executed successfully
+2025-10-19 19:59:14 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:14] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 19:59:14 | INFO | START - get_weekly_prices
+2025-10-19 19:59:14 | INFO | START - load_data
+2025-10-19 19:59:14 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:14 | INFO | END - load_data executed successfully
+2025-10-19 19:59:14 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:14 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:14] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:22 | INFO | START - get_weekly_prices
+2025-10-19 19:59:22 | INFO | START - load_data
+2025-10-19 19:59:22 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:22 | INFO | END - load_data executed successfully
+2025-10-19 19:59:22 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:22 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:22] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:23 | INFO | START - get_weekly_prices
+2025-10-19 19:59:23 | INFO | START - load_data
+2025-10-19 19:59:23 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:23 | INFO | END - load_data executed successfully
+2025-10-19 19:59:23 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:23 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:23] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:24 | INFO | START - get_weekly_prices
+2025-10-19 19:59:24 | INFO | START - load_data
+2025-10-19 19:59:24 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:24 | INFO | END - load_data executed successfully
+2025-10-19 19:59:24 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:24 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:24] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:24 | INFO | START - get_weekly_prices
+2025-10-19 19:59:24 | INFO | START - load_data
+2025-10-19 19:59:24 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:24 | INFO | END - load_data executed successfully
+2025-10-19 19:59:24 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:24 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:24] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:24 | INFO | START - get_weekly_prices
+2025-10-19 19:59:24 | INFO | START - load_data
+2025-10-19 19:59:24 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:24 | INFO | END - load_data executed successfully
+2025-10-19 19:59:24 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:24 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:24] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:24 | INFO | START - get_weekly_prices
+2025-10-19 19:59:24 | INFO | START - load_data
+2025-10-19 19:59:24 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:24 | INFO | END - load_data executed successfully
+2025-10-19 19:59:24 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:24 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:24] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:24 | INFO | START - get_weekly_prices
+2025-10-19 19:59:24 | INFO | START - load_data
+2025-10-19 19:59:24 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:24 | INFO | END - load_data executed successfully
+2025-10-19 19:59:25 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:25 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:25] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:25 | INFO | START - get_weekly_prices
+2025-10-19 19:59:25 | INFO | START - load_data
+2025-10-19 19:59:25 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:25 | INFO | END - load_data executed successfully
+2025-10-19 19:59:25 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:25 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:25] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:25 | INFO | START - get_weekly_prices
+2025-10-19 19:59:25 | INFO | START - load_data
+2025-10-19 19:59:25 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:25 | INFO | END - load_data executed successfully
+2025-10-19 19:59:25 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:25 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:25] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:25 | INFO | START - get_weekly_prices
+2025-10-19 19:59:25 | INFO | START - load_data
+2025-10-19 19:59:25 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:25 | INFO | END - load_data executed successfully
+2025-10-19 19:59:25 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:25 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:25] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:25 | INFO | START - get_weekly_prices
+2025-10-19 19:59:25 | INFO | START - load_data
+2025-10-19 19:59:25 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:25 | INFO | END - load_data executed successfully
+2025-10-19 19:59:25 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:25 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:25] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:25 | INFO | START - get_weekly_prices
+2025-10-19 19:59:25 | INFO | START - load_data
+2025-10-19 19:59:25 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:25 | INFO | END - load_data executed successfully
+2025-10-19 19:59:25 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:25 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:25] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:26 | INFO | START - get_weekly_prices
+2025-10-19 19:59:26 | INFO | START - load_data
+2025-10-19 19:59:26 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:26 | INFO | END - load_data executed successfully
+2025-10-19 19:59:26 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:26 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:26] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 19:59:26 | INFO | START - get_weekly_prices
+2025-10-19 19:59:26 | INFO | START - load_data
+2025-10-19 19:59:26 | INFO | Data loaded successfully with 2 records.
+2025-10-19 19:59:26 | INFO | END - load_data executed successfully
+2025-10-19 19:59:26 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 19:59:26 | INFO | 127.0.0.1 - - [19/Oct/2025 19:59:26] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:52:41 | INFO | Starting Tiffin Tracker server...
+2025-10-19 20:52:41 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 20:52:41 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 20:52:41 | INFO |  * Restarting with stat
+2025-10-19 20:52:45 | INFO | Starting Tiffin Tracker server...
+2025-10-19 20:52:45 | WARNING |  * Debugger is active!
+2025-10-19 20:52:45 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 20:53:00 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:00] "GET / HTTP/1.1" 200 -
+2025-10-19 20:53:01 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 20:53:02 | INFO | START - get_weekly_prices
+2025-10-19 20:53:02 | INFO | START - load_data
+2025-10-19 20:53:02 | INFO | END - load_data executed successfully
+2025-10-19 20:53:05 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:05 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:05] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:19 | INFO | START - add_entry
+2025-10-19 20:53:19 | INFO | START - load_data
+2025-10-19 20:53:19 | INFO | END - load_data executed successfully
+2025-10-19 20:53:19 | INFO | START - save_data
+2025-10-19 20:53:19 | INFO | Data saved successfully.
+2025-10-19 20:53:19 | INFO | END - save_data executed successfully
+2025-10-19 20:53:19 | INFO | END - add_entry executed successfully
+2025-10-19 20:53:19 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:19] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 20:53:19 | INFO | START - get_weekly_prices
+2025-10-19 20:53:19 | INFO | START - load_data
+2025-10-19 20:53:19 | INFO | END - load_data executed successfully
+2025-10-19 20:53:19 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:19 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:19] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:25 | INFO | START - get_weekly_prices
+2025-10-19 20:53:25 | INFO | START - load_data
+2025-10-19 20:53:25 | INFO | END - load_data executed successfully
+2025-10-19 20:53:25 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:25 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:25] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:26 | INFO | START - get_weekly_prices
+2025-10-19 20:53:26 | INFO | START - load_data
+2025-10-19 20:53:26 | INFO | END - load_data executed successfully
+2025-10-19 20:53:26 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:26 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:26] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:26 | INFO | START - get_weekly_prices
+2025-10-19 20:53:26 | INFO | START - load_data
+2025-10-19 20:53:26 | INFO | END - load_data executed successfully
+2025-10-19 20:53:26 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:26 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:26] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:26 | INFO | START - get_weekly_prices
+2025-10-19 20:53:26 | INFO | START - load_data
+2025-10-19 20:53:26 | INFO | END - load_data executed successfully
+2025-10-19 20:53:27 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:27 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:27] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:27 | INFO | START - get_weekly_prices
+2025-10-19 20:53:27 | INFO | START - load_data
+2025-10-19 20:53:27 | INFO | END - load_data executed successfully
+2025-10-19 20:53:27 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:27 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:27] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:27 | INFO | START - get_weekly_prices
+2025-10-19 20:53:27 | INFO | START - load_data
+2025-10-19 20:53:27 | INFO | END - load_data executed successfully
+2025-10-19 20:53:27 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:27 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:27] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:27 | INFO | START - get_weekly_prices
+2025-10-19 20:53:27 | INFO | START - load_data
+2025-10-19 20:53:27 | INFO | END - load_data executed successfully
+2025-10-19 20:53:27 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:27 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:27] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:27 | INFO | START - get_weekly_prices
+2025-10-19 20:53:27 | INFO | START - load_data
+2025-10-19 20:53:27 | INFO | END - load_data executed successfully
+2025-10-19 20:53:27 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:27 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:27] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:27 | INFO | START - get_weekly_prices
+2025-10-19 20:53:27 | INFO | START - load_data
+2025-10-19 20:53:28 | INFO | END - load_data executed successfully
+2025-10-19 20:53:28 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:28 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:28] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:28 | INFO | START - get_weekly_prices
+2025-10-19 20:53:28 | INFO | START - load_data
+2025-10-19 20:53:28 | INFO | END - load_data executed successfully
+2025-10-19 20:53:28 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:28 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:28] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:28 | INFO | START - get_weekly_prices
+2025-10-19 20:53:28 | INFO | START - load_data
+2025-10-19 20:53:28 | INFO | END - load_data executed successfully
+2025-10-19 20:53:28 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:28 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:28] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:28 | INFO | START - get_weekly_prices
+2025-10-19 20:53:28 | INFO | START - load_data
+2025-10-19 20:53:28 | INFO | END - load_data executed successfully
+2025-10-19 20:53:28 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:28 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:28] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:30 | INFO | START - get_weekly_prices
+2025-10-19 20:53:30 | INFO | START - load_data
+2025-10-19 20:53:30 | INFO | END - load_data executed successfully
+2025-10-19 20:53:30 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:30 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:30] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:30 | INFO | START - get_weekly_prices
+2025-10-19 20:53:30 | INFO | START - load_data
+2025-10-19 20:53:30 | INFO | END - load_data executed successfully
+2025-10-19 20:53:30 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:30 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:30] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:30 | INFO | START - get_weekly_prices
+2025-10-19 20:53:30 | INFO | START - load_data
+2025-10-19 20:53:30 | INFO | END - load_data executed successfully
+2025-10-19 20:53:31 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:31 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:31] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:53:31 | INFO | START - get_weekly_prices
+2025-10-19 20:53:31 | INFO | START - load_data
+2025-10-19 20:53:31 | INFO | END - load_data executed successfully
+2025-10-19 20:53:31 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:53:31 | INFO | 127.0.0.1 - - [19/Oct/2025 20:53:31] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:54:26 | INFO | START - add_entry
+2025-10-19 20:54:26 | INFO | START - load_data
+2025-10-19 20:54:26 | INFO | END - load_data executed successfully
+2025-10-19 20:54:26 | INFO | START - save_data
+2025-10-19 20:54:26 | INFO | Data saved successfully.
+2025-10-19 20:54:26 | INFO | END - save_data executed successfully
+2025-10-19 20:54:26 | INFO | END - add_entry executed successfully
+2025-10-19 20:54:26 | INFO | 127.0.0.1 - - [19/Oct/2025 20:54:26] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 20:54:27 | INFO | START - get_weekly_prices
+2025-10-19 20:54:27 | INFO | START - load_data
+2025-10-19 20:54:27 | INFO | END - load_data executed successfully
+2025-10-19 20:54:27 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:54:27 | INFO | 127.0.0.1 - - [19/Oct/2025 20:54:27] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:54:31 | INFO | START - get_weekly_prices
+2025-10-19 20:54:31 | INFO | START - load_data
+2025-10-19 20:54:31 | INFO | END - load_data executed successfully
+2025-10-19 20:54:31 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:54:31 | INFO | 127.0.0.1 - - [19/Oct/2025 20:54:31] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:54:31 | INFO | START - get_weekly_prices
+2025-10-19 20:54:31 | INFO | START - load_data
+2025-10-19 20:54:31 | INFO | END - load_data executed successfully
+2025-10-19 20:54:31 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:54:31 | INFO | 127.0.0.1 - - [19/Oct/2025 20:54:31] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:54:32 | INFO | START - get_weekly_prices
+2025-10-19 20:54:32 | INFO | START - load_data
+2025-10-19 20:54:32 | INFO | END - load_data executed successfully
+2025-10-19 20:54:32 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:54:32 | INFO | 127.0.0.1 - - [19/Oct/2025 20:54:32] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:54:32 | INFO | START - get_weekly_prices
+2025-10-19 20:54:32 | INFO | START - load_data
+2025-10-19 20:54:32 | INFO | END - load_data executed successfully
+2025-10-19 20:54:32 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:54:32 | INFO | 127.0.0.1 - - [19/Oct/2025 20:54:32] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:54:32 | INFO | START - get_weekly_prices
+2025-10-19 20:54:32 | INFO | START - load_data
+2025-10-19 20:54:32 | INFO | END - load_data executed successfully
+2025-10-19 20:54:32 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:54:32 | INFO | 127.0.0.1 - - [19/Oct/2025 20:54:32] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:54:33 | INFO | START - get_weekly_prices
+2025-10-19 20:54:33 | INFO | START - load_data
+2025-10-19 20:54:33 | INFO | END - load_data executed successfully
+2025-10-19 20:54:33 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:54:33 | INFO | 127.0.0.1 - - [19/Oct/2025 20:54:33] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:54:33 | INFO | START - get_weekly_prices
+2025-10-19 20:54:33 | INFO | START - load_data
+2025-10-19 20:54:33 | INFO | END - load_data executed successfully
+2025-10-19 20:54:33 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:54:33 | INFO | 127.0.0.1 - - [19/Oct/2025 20:54:33] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:59:13 | INFO | Starting Tiffin Tracker server...
+2025-10-19 20:59:13 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 20:59:13 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 20:59:13 | INFO |  * Restarting with stat
+2025-10-19 20:59:16 | INFO | Starting Tiffin Tracker server...
+2025-10-19 20:59:16 | WARNING |  * Debugger is active!
+2025-10-19 20:59:16 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 20:59:38 | INFO | 127.0.0.1 - - [19/Oct/2025 20:59:38] "GET / HTTP/1.1" 200 -
+2025-10-19 20:59:39 | INFO | 127.0.0.1 - - [19/Oct/2025 20:59:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 20:59:39 | INFO | START - get_weekly_prices
+2025-10-19 20:59:39 | INFO | START - load_data
+2025-10-19 20:59:39 | INFO | END - load_data executed successfully
+2025-10-19 20:59:39 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:59:39 | INFO | 127.0.0.1 - - [19/Oct/2025 20:59:39] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:59:49 | INFO | START - add_entry
+2025-10-19 20:59:49 | INFO | START - load_data
+2025-10-19 20:59:49 | INFO | END - load_data executed successfully
+2025-10-19 20:59:49 | INFO | START - save_data
+2025-10-19 20:59:49 | INFO | Data saved successfully.
+2025-10-19 20:59:49 | INFO | END - save_data executed successfully
+2025-10-19 20:59:49 | INFO | END - add_entry executed successfully
+2025-10-19 20:59:49 | INFO | 127.0.0.1 - - [19/Oct/2025 20:59:49] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 20:59:49 | INFO | START - get_weekly_prices
+2025-10-19 20:59:49 | INFO | START - load_data
+2025-10-19 20:59:50 | INFO | END - load_data executed successfully
+2025-10-19 20:59:50 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:59:50 | INFO | 127.0.0.1 - - [19/Oct/2025 20:59:50] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:59:54 | INFO | START - get_weekly_prices
+2025-10-19 20:59:54 | INFO | START - load_data
+2025-10-19 20:59:54 | INFO | END - load_data executed successfully
+2025-10-19 20:59:54 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:59:54 | INFO | 127.0.0.1 - - [19/Oct/2025 20:59:54] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:59:56 | INFO | START - get_weekly_prices
+2025-10-19 20:59:56 | INFO | START - load_data
+2025-10-19 20:59:56 | INFO | END - load_data executed successfully
+2025-10-19 20:59:56 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:59:56 | INFO | 127.0.0.1 - - [19/Oct/2025 20:59:56] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:59:56 | INFO | START - get_weekly_prices
+2025-10-19 20:59:56 | INFO | START - load_data
+2025-10-19 20:59:56 | INFO | END - load_data executed successfully
+2025-10-19 20:59:56 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:59:56 | INFO | 127.0.0.1 - - [19/Oct/2025 20:59:56] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 20:59:57 | INFO | START - get_weekly_prices
+2025-10-19 20:59:57 | INFO | START - load_data
+2025-10-19 20:59:57 | INFO | END - load_data executed successfully
+2025-10-19 20:59:57 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 20:59:57 | INFO | 127.0.0.1 - - [19/Oct/2025 20:59:57] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:09:21 | INFO |  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 21:09:23 | INFO |  * Restarting with stat
+2025-10-19 21:09:30 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:09:30 | WARNING |  * Debugger is active!
+2025-10-19 21:09:30 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 21:09:53 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:09:53 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 21:09:53 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 21:09:53 | INFO |  * Restarting with stat
+2025-10-19 21:09:56 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:09:56 | WARNING |  * Debugger is active!
+2025-10-19 21:09:56 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 21:10:31 | INFO | 127.0.0.1 - - [19/Oct/2025 21:10:31] "GET / HTTP/1.1" 200 -
+2025-10-19 21:10:32 | INFO | 127.0.0.1 - - [19/Oct/2025 21:10:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 21:10:32 | INFO | START - get_weekly_prices
+2025-10-19 21:10:32 | INFO | START - load_data
+2025-10-19 21:10:32 | INFO | END - load_data executed successfully
+2025-10-19 21:10:32 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:10:32 | INFO | 127.0.0.1 - - [19/Oct/2025 21:10:32] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:10:39 | INFO | START - add_entry
+2025-10-19 21:10:39 | INFO | START - load_data
+2025-10-19 21:10:39 | INFO | END - load_data executed successfully
+2025-10-19 21:10:39 | INFO | START - save_data
+2025-10-19 21:10:39 | INFO | Data saved successfully.
+2025-10-19 21:10:39 | INFO | END - save_data executed successfully
+2025-10-19 21:10:39 | INFO | END - add_entry executed successfully
+2025-10-19 21:10:39 | INFO | 127.0.0.1 - - [19/Oct/2025 21:10:39] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 21:10:39 | INFO | START - get_weekly_prices
+2025-10-19 21:10:39 | INFO | START - load_data
+2025-10-19 21:10:39 | INFO | END - load_data executed successfully
+2025-10-19 21:10:39 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:10:39 | INFO | 127.0.0.1 - - [19/Oct/2025 21:10:39] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:10:49 | INFO | START - get_weekly_prices
+2025-10-19 21:10:49 | INFO | START - load_data
+2025-10-19 21:10:49 | INFO | END - load_data executed successfully
+2025-10-19 21:10:49 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:10:49 | INFO | 127.0.0.1 - - [19/Oct/2025 21:10:49] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:10:50 | INFO | START - get_weekly_prices
+2025-10-19 21:10:50 | INFO | START - load_data
+2025-10-19 21:10:50 | INFO | END - load_data executed successfully
+2025-10-19 21:10:50 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:10:50 | INFO | 127.0.0.1 - - [19/Oct/2025 21:10:50] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:11:44 | INFO |  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 21:11:44 | INFO |  * Restarting with stat
+2025-10-19 21:11:49 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:11:50 | WARNING |  * Debugger is active!
+2025-10-19 21:11:50 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 21:12:42 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:12:42 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 21:12:42 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 21:12:42 | INFO |  * Restarting with stat
+2025-10-19 21:12:46 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:12:46 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 21:12:46 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 21:12:46 | INFO |  * Restarting with stat
+2025-10-19 21:12:49 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:12:49 | WARNING |  * Debugger is active!
+2025-10-19 21:12:49 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 21:13:00 | INFO | 127.0.0.1 - - [19/Oct/2025 21:13:00] "GET / HTTP/1.1" 200 -
+2025-10-19 21:13:00 | INFO | 127.0.0.1 - - [19/Oct/2025 21:13:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 21:13:00 | INFO | START - get_weekly_prices
+2025-10-19 21:13:00 | INFO | START - load_data
+2025-10-19 21:13:00 | INFO | END - load_data executed successfully
+2025-10-19 21:13:00 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:13:00 | INFO | 127.0.0.1 - - [19/Oct/2025 21:13:00] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:13:07 | INFO | START - add_entry
+2025-10-19 21:13:07 | INFO | START - load_data
+2025-10-19 21:13:07 | INFO | END - load_data executed successfully
+2025-10-19 21:13:07 | INFO | START - save_data
+2025-10-19 21:13:07 | INFO | Data saved successfully.
+2025-10-19 21:13:07 | INFO | END - save_data executed successfully
+2025-10-19 21:13:07 | INFO | END - add_entry executed successfully
+2025-10-19 21:13:07 | INFO | 127.0.0.1 - - [19/Oct/2025 21:13:07] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 21:13:07 | INFO | START - get_weekly_prices
+2025-10-19 21:13:07 | INFO | START - load_data
+2025-10-19 21:13:07 | INFO | END - load_data executed successfully
+2025-10-19 21:13:07 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:13:07 | INFO | 127.0.0.1 - - [19/Oct/2025 21:13:07] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:13:17 | INFO | START - get_weekly_prices
+2025-10-19 21:13:17 | INFO | START - load_data
+2025-10-19 21:13:17 | INFO | END - load_data executed successfully
+2025-10-19 21:13:17 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:13:17 | INFO | 127.0.0.1 - - [19/Oct/2025 21:13:17] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:14:34 | INFO |  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 21:14:35 | INFO |  * Restarting with stat
+2025-10-19 21:14:38 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:14:38 | WARNING |  * Debugger is active!
+2025-10-19 21:14:38 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 21:14:40 | INFO |  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 21:14:41 | INFO |  * Restarting with stat
+2025-10-19 21:14:44 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:14:45 | WARNING |  * Debugger is active!
+2025-10-19 21:14:45 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 21:15:53 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:15:53 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 21:15:53 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 21:15:53 | INFO |  * Restarting with stat
+2025-10-19 21:15:55 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:15:55 | WARNING |  * Debugger is active!
+2025-10-19 21:15:55 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 21:16:06 | INFO | 127.0.0.1 - - [19/Oct/2025 21:16:06] "GET / HTTP/1.1" 200 -
+2025-10-19 21:16:06 | INFO | 127.0.0.1 - - [19/Oct/2025 21:16:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 21:16:06 | INFO | START - get_weekly_prices
+2025-10-19 21:16:06 | INFO | START - load_data
+2025-10-19 21:16:07 | INFO | END - load_data executed successfully
+2025-10-19 21:16:07 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:16:07 | INFO | 127.0.0.1 - - [19/Oct/2025 21:16:07] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:16:14 | INFO | START - add_entry
+2025-10-19 21:16:14 | INFO | START - load_data
+2025-10-19 21:16:14 | INFO | END - load_data executed successfully
+2025-10-19 21:16:14 | INFO | START - save_data
+2025-10-19 21:16:14 | INFO | Data saved successfully.
+2025-10-19 21:16:14 | INFO | END - save_data executed successfully
+2025-10-19 21:16:14 | INFO | END - add_entry executed successfully
+2025-10-19 21:16:14 | INFO | 127.0.0.1 - - [19/Oct/2025 21:16:14] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 21:16:14 | INFO | START - get_weekly_prices
+2025-10-19 21:16:14 | INFO | START - load_data
+2025-10-19 21:16:14 | INFO | END - load_data executed successfully
+2025-10-19 21:16:14 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:16:14 | INFO | 127.0.0.1 - - [19/Oct/2025 21:16:14] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:16:28 | INFO | START - add_entry
+2025-10-19 21:16:28 | INFO | START - load_data
+2025-10-19 21:16:28 | INFO | END - load_data executed successfully
+2025-10-19 21:16:28 | INFO | START - save_data
+2025-10-19 21:16:28 | INFO | Data saved successfully.
+2025-10-19 21:16:28 | INFO | END - save_data executed successfully
+2025-10-19 21:16:28 | INFO | END - add_entry executed successfully
+2025-10-19 21:16:28 | INFO | 127.0.0.1 - - [19/Oct/2025 21:16:28] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 21:16:28 | INFO | START - get_weekly_prices
+2025-10-19 21:16:28 | INFO | START - load_data
+2025-10-19 21:16:28 | INFO | END - load_data executed successfully
+2025-10-19 21:16:28 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:16:28 | INFO | 127.0.0.1 - - [19/Oct/2025 21:16:28] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:16:32 | INFO | START - get_weekly_prices
+2025-10-19 21:16:32 | INFO | START - load_data
+2025-10-19 21:16:32 | INFO | END - load_data executed successfully
+2025-10-19 21:16:32 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:16:32 | INFO | 127.0.0.1 - - [19/Oct/2025 21:16:32] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:16:34 | INFO | START - get_weekly_prices
+2025-10-19 21:16:34 | INFO | START - load_data
+2025-10-19 21:16:34 | INFO | END - load_data executed successfully
+2025-10-19 21:16:34 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:16:34 | INFO | 127.0.0.1 - - [19/Oct/2025 21:16:34] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:16:36 | INFO | START - get_weekly_prices
+2025-10-19 21:16:36 | INFO | START - load_data
+2025-10-19 21:16:36 | INFO | END - load_data executed successfully
+2025-10-19 21:16:36 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:16:36 | INFO | 127.0.0.1 - - [19/Oct/2025 21:16:36] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:16:37 | INFO | START - get_weekly_prices
+2025-10-19 21:16:37 | INFO | START - load_data
+2025-10-19 21:16:37 | INFO | END - load_data executed successfully
+2025-10-19 21:16:37 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:16:37 | INFO | 127.0.0.1 - - [19/Oct/2025 21:16:37] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:21:27 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:21:27 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 21:21:27 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 21:21:27 | INFO |  * Restarting with stat
+2025-10-19 21:21:29 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:21:29 | WARNING |  * Debugger is active!
+2025-10-19 21:21:29 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 21:21:36 | INFO | 127.0.0.1 - - [19/Oct/2025 21:21:36] "GET / HTTP/1.1" 200 -
+2025-10-19 21:21:36 | INFO | 127.0.0.1 - - [19/Oct/2025 21:21:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 21:21:36 | INFO | START - get_weekly_prices
+2025-10-19 21:21:36 | INFO | START - load_data
+2025-10-19 21:21:37 | INFO | END - load_data executed successfully
+2025-10-19 21:21:37 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:21:37 | INFO | 127.0.0.1 - - [19/Oct/2025 21:21:37] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:21:43 | INFO | 127.0.0.1 - - [19/Oct/2025 21:21:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 21:21:43 | INFO | 127.0.0.1 - - [19/Oct/2025 21:21:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 21:22:08 | INFO | START - add_entry
+2025-10-19 21:22:08 | INFO | START - load_data
+2025-10-19 21:22:08 | INFO | END - load_data executed successfully
+2025-10-19 21:22:08 | INFO | START - save_data
+2025-10-19 21:22:08 | INFO | Data saved successfully.
+2025-10-19 21:22:08 | INFO | END - save_data executed successfully
+2025-10-19 21:22:08 | INFO | END - add_entry executed successfully
+2025-10-19 21:22:08 | INFO | 127.0.0.1 - - [19/Oct/2025 21:22:08] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 21:22:08 | INFO | START - get_weekly_prices
+2025-10-19 21:22:08 | INFO | START - load_data
+2025-10-19 21:22:08 | INFO | END - load_data executed successfully
+2025-10-19 21:22:08 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:22:08 | INFO | 127.0.0.1 - - [19/Oct/2025 21:22:08] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:22:22 | INFO | START - get_weekly_prices
+2025-10-19 21:22:22 | INFO | START - load_data
+2025-10-19 21:22:22 | INFO | END - load_data executed successfully
+2025-10-19 21:22:22 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:22:22 | INFO | 127.0.0.1 - - [19/Oct/2025 21:22:22] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:22:23 | INFO | START - get_weekly_prices
+2025-10-19 21:22:23 | INFO | START - load_data
+2025-10-19 21:22:23 | INFO | END - load_data executed successfully
+2025-10-19 21:22:23 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:22:23 | INFO | 127.0.0.1 - - [19/Oct/2025 21:22:23] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:23:42 | INFO | START - add_entry
+2025-10-19 21:23:42 | INFO | START - load_data
+2025-10-19 21:23:42 | INFO | END - load_data executed successfully
+2025-10-19 21:23:42 | INFO | START - save_data
+2025-10-19 21:23:42 | INFO | Data saved successfully.
+2025-10-19 21:23:42 | INFO | END - save_data executed successfully
+2025-10-19 21:23:42 | INFO | END - add_entry executed successfully
+2025-10-19 21:23:42 | INFO | 127.0.0.1 - - [19/Oct/2025 21:23:42] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 21:23:42 | INFO | START - get_weekly_prices
+2025-10-19 21:23:42 | INFO | START - load_data
+2025-10-19 21:23:42 | INFO | END - load_data executed successfully
+2025-10-19 21:23:42 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:23:42 | INFO | 127.0.0.1 - - [19/Oct/2025 21:23:42] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:23:47 | INFO | START - get_weekly_prices
+2025-10-19 21:23:47 | INFO | START - load_data
+2025-10-19 21:23:47 | INFO | END - load_data executed successfully
+2025-10-19 21:23:47 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:23:47 | INFO | 127.0.0.1 - - [19/Oct/2025 21:23:47] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:26:49 | INFO | START - get_weekly_prices
+2025-10-19 21:26:49 | INFO | START - load_data
+2025-10-19 21:26:49 | INFO | END - load_data executed successfully
+2025-10-19 21:26:49 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:26:49 | INFO | 127.0.0.1 - - [19/Oct/2025 21:26:49] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:26:53 | INFO | 127.0.0.1 - - [19/Oct/2025 21:26:53] "[31m[1mGET /api/entry HTTP/1.1[0m" 405 -
+2025-10-19 21:28:03 | INFO |  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 21:28:04 | INFO |  * Restarting with stat
+2025-10-19 21:28:07 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:28:07 | WARNING |  * Debugger is active!
+2025-10-19 21:28:07 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 21:29:04 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:29:04 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 21:29:04 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 21:29:04 | INFO |  * Restarting with stat
+2025-10-19 21:29:06 | INFO | Starting Tiffin Tracker server...
+2025-10-19 21:29:06 | WARNING |  * Debugger is active!
+2025-10-19 21:29:06 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 21:29:31 | INFO | 127.0.0.1 - - [19/Oct/2025 21:29:31] "GET / HTTP/1.1" 200 -
+2025-10-19 21:29:31 | INFO | 127.0.0.1 - - [19/Oct/2025 21:29:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-19 21:29:32 | INFO | 127.0.0.1 - - [19/Oct/2025 21:29:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 21:29:32 | INFO | START - get_weekly_prices
+2025-10-19 21:29:32 | INFO | START - load_data
+2025-10-19 21:29:32 | INFO | END - load_data executed successfully
+2025-10-19 21:29:32 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:29:32 | INFO | 127.0.0.1 - - [19/Oct/2025 21:29:32] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 21:29:40 | INFO | START - add_entry
+2025-10-19 21:29:40 | INFO | START - load_data
+2025-10-19 21:29:40 | INFO | END - load_data executed successfully
+2025-10-19 21:29:40 | INFO | START - save_data
+2025-10-19 21:29:40 | INFO | Data saved successfully.
+2025-10-19 21:29:40 | INFO | END - save_data executed successfully
+2025-10-19 21:29:40 | INFO | END - add_entry executed successfully
+2025-10-19 21:29:40 | INFO | 127.0.0.1 - - [19/Oct/2025 21:29:40] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 21:29:41 | INFO | START - get_weekly_prices
+2025-10-19 21:29:41 | INFO | START - load_data
+2025-10-19 21:29:41 | INFO | END - load_data executed successfully
+2025-10-19 21:29:41 | INFO | END - get_weekly_prices executed successfully
+2025-10-19 21:29:41 | INFO | 127.0.0.1 - - [19/Oct/2025 21:29:41] "GET /api/weekly_prices HTTP/1.1" 200 -
+2025-10-19 22:47:43 | INFO |  * Detected change in 'E:\\tiffin-tracker-v2\\app.py', reloading
+2025-10-19 22:47:45 | INFO |  * Restarting with stat
+2025-10-19 22:48:02 | INFO | Starting Tiffin Tracker server...
+2025-10-19 22:48:02 | WARNING |  * Debugger is active!
+2025-10-19 22:48:02 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 22:49:12 | INFO | Starting Tiffin Tracker server...
+2025-10-19 22:49:12 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-19 22:49:12 | INFO | [33mPress CTRL+C to quit[0m
+2025-10-19 22:49:12 | INFO |  * Restarting with stat
+2025-10-19 22:49:15 | INFO | Starting Tiffin Tracker server...
+2025-10-19 22:49:15 | WARNING |  * Debugger is active!
+2025-10-19 22:49:15 | INFO |  * Debugger PIN: 336-246-015
+2025-10-19 22:49:25 | INFO | 127.0.0.1 - - [19/Oct/2025 22:49:25] "[33mGET /api/weekly_prices HTTP/1.1[0m" 404 -
+2025-10-19 22:49:36 | INFO | 127.0.0.1 - - [19/Oct/2025 22:49:36] "GET / HTTP/1.1" 200 -
+2025-10-19 22:49:36 | INFO | 127.0.0.1 - - [19/Oct/2025 22:49:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 22:49:36 | INFO | START - get_summary
+2025-10-19 22:49:36 | INFO | START - load_data
+2025-10-19 22:49:37 | INFO | END - load_data executed successfully
+2025-10-19 22:49:37 | INFO | END - get_summary executed successfully
+2025-10-19 22:49:37 | INFO | 127.0.0.1 - - [19/Oct/2025 22:49:37] "GET /api/summary HTTP/1.1" 200 -
+2025-10-19 22:49:58 | INFO | 127.0.0.1 - - [19/Oct/2025 22:49:58] "GET / HTTP/1.1" 200 -
+2025-10-19 22:49:58 | INFO | 127.0.0.1 - - [19/Oct/2025 22:49:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-10-19 22:49:58 | INFO | START - get_summary
+2025-10-19 22:49:58 | INFO | START - load_data
+2025-10-19 22:49:58 | INFO | END - load_data executed successfully
+2025-10-19 22:49:58 | INFO | END - get_summary executed successfully
+2025-10-19 22:49:58 | INFO | 127.0.0.1 - - [19/Oct/2025 22:49:58] "GET /api/summary HTTP/1.1" 200 -
+2025-10-19 22:50:09 | INFO | START - add_entry
+2025-10-19 22:50:09 | INFO | START - load_data
+2025-10-19 22:50:09 | INFO | END - load_data executed successfully
+2025-10-19 22:50:09 | INFO | START - save_data
+2025-10-19 22:50:09 | INFO | Data saved successfully.
+2025-10-19 22:50:09 | INFO | END - save_data executed successfully
+2025-10-19 22:50:09 | INFO | END - add_entry executed successfully
+2025-10-19 22:50:09 | INFO | 127.0.0.1 - - [19/Oct/2025 22:50:09] "POST /api/entry HTTP/1.1" 200 -
+2025-10-19 22:50:09 | INFO | START - get_summary
+2025-10-19 22:50:09 | INFO | START - load_data
+2025-10-19 22:50:09 | INFO | END - load_data executed successfully
+2025-10-19 22:50:09 | INFO | END - get_summary executed successfully
+2025-10-19 22:50:09 | INFO | 127.0.0.1 - - [19/Oct/2025 22:50:09] "GET /api/summary HTTP/1.1" 200 -
+2025-10-19 22:50:16 | INFO | START - get_summary
+2025-10-19 22:50:16 | INFO | START - load_data
+2025-10-19 22:50:16 | INFO | END - load_data executed successfully
+2025-10-19 22:50:16 | INFO | END - get_summary executed successfully
+2025-10-19 22:50:16 | INFO | 127.0.0.1 - - [19/Oct/2025 22:50:16] "GET /api/summary HTTP/1.1" 200 -
+2025-10-19 22:50:17 | INFO | START - get_summary
+2025-10-19 22:50:17 | INFO | START - load_data
+2025-10-19 22:50:17 | INFO | END - load_data executed successfully
+2025-10-19 22:50:17 | INFO | END - get_summary executed successfully
+2025-10-19 22:50:17 | INFO | 127.0.0.1 - - [19/Oct/2025 22:50:17] "GET /api/summary HTTP/1.1" 200 -
