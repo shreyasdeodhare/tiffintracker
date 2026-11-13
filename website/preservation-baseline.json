@@ -1,0 +1,315 @@
+{
+  "branch": "feature/cloudflare-landing-page",
+  "commit": "204a8d21effbe9083b8290c39e9feb23da7d5730",
+  "files": {
+    ".dockerignore": "16e027d692a0d750902b77b5f691237be6d8d514d30383260913fe99225ff273",
+    ".env.example": "6e291d4a7c251930ce778342bc0f6285b81309eaf37c1e2410f24bc6c3694e3a",
+    ".gitignore": "b6cd4690f5e0e434bfd619d24e15f72635e2f38682ea9520527d782b4bc71058",
+    "ACCEPTANCE-MATRIX.csv": "0a6baf4c17aa5a722d054da79fb2309e664ef8c609e2de5fa1f31a42f7d19af6",
+    "ACCESS.md": "ac6b8e1ff8b3a4660b5d3ab1de4c235d398c841c33fbdc7550ab3393a4ea7c1e",
+    "AUDIT-REMEDIATION.md": "20172cbd229150b618a082a27dd11e6c046f9e2a862cfa0668fccc445cd82423",
+    "CODE-MANIFEST.sha256": "4aefcb7803c31f82ac53439f1a13696695e29bace221b7c09e89931979ead5c6",
+    "DOMAIN-READINESS.md": "76dbc225d48ad3ab387623e821d6e20345b662cd0fcc6dafed86eb59b8b2377d",
+    "Dockerfile": "e071ae9c82cf0b817072b79a71022fc49d779a26a3139b834c470bfc907075ec",
+    "FINAL-ACCEPTANCE.md": "2d162d504401aa3d8c303bafc2b4e366aea7eb17555c400ee5b2921ab6ec6269",
+    "GATEWAY-FIX.md": "fe518824abbecd376ae8b48de3efe95461ffd2b36fa5a6125059f45b192cf19c",
+    "LAYERED-IMPLEMENTATION.md": "baff1853a7ee4c7e1731bf2060d3fa65b5e8ecb6678c0781b529b5d608b86bef",
+    "README.md": "e0825ef2797a9765e4937c303263fc2796471168750b0e5cb7c8a32d8e10a165",
+    "RECOVERY.md": "afdf3088670b3cc85b21355bd83eda3d888a7da5ca7b85a4abcdcc7d7e4c9a75",
+    "SOURCE-MANIFEST.sha256": "b1b4659291066158b5ca9ff753864941d4e7dd3309765378c3f4902c09407d1c",
+    "STABILIZATION-VERIFICATION.md": "0ab80c2751c30ca7ffc9c970b933b25e833afa299ca039b1932b2b4bf48b1ac7",
+    "TiffinTrack Complete File Reference.pdf": "eb5a67135860ebf9f0ad10d338abf385c311221261c230698ebba936e330b47d",
+    "VERIFICATION.md": "8f44ba5f0084e56701437dbcd737fb9af415f9bf212ce90b44c33bbac722a972",
+    "WHATSAPP-VERIFICATION.md": "20a67efca494574a382be19733b8ef3b8897c0ea62d9051ff2f7ef1e84f47278",
+    "WHATSAPP.md": "431917ff3525dee8bc37c033f6b077f4ed1749692b6d7d7faa21f418dd25fb7c",
+    "app/__init__.py": "2cffd90d0ba0909de764fc0664b0ffb62eada1157e761180a855cd95173af88b",
+    "app/application/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/application/accounts.py": "b0caac57673bff9ba41d3fae4ffea08512dc0cc66a958d4726c80ad379999d29",
+    "app/application/exports.py": "494831717b05b293da0680457095539325a1a8f8d84e8c12943a1dabae865bb0",
+    "app/application/finance.py": "f6536cd6ca5e516ec65dcd974ed2247940b012f1fcdcd783c98c58d2491bd55d",
+    "app/application/ingestion.py": "942298fbe60748218443103fe79a6d106877076ae78c8e2865915c023da07c58",
+    "app/application/legacy_dashboard.py": "f4bcf0d4f68584f143dbcabb9b8dc64e80fae7979807d05dbf647f4b8d163d34",
+    "app/application/monitoring.py": "06c9a0063cccb7878d3066b2eb4f3bb8e5eb4cacb2709e9338c425212a5b30dc",
+    "app/application/order_decisions.py": "3150dc788e20fe9d9a9aabce3dded3da3a5fb99ebf8ae9455f323ca09fb0a816",
+    "app/application/orders.py": "375ec5bb0685f81e7e649cdbe32e197c6d69db208a7006e41f5fe9d4292f4b3d",
+    "app/application/participants.py": "5f109ebcf88df06fcdb8558a6b41bb6940ff4f0b04b732b173856e364c6524fe",
+    "app/application/publications.py": "cbff82781443277ad6a4a1e81ee4967c107b7b26e8aa243445b8bb0efb6f3fc4",
+    "app/application/reporting.py": "b2d017ce1e844c2c4a0ac8c564dd2d1efcf7087cf04a565f3566dd171af174fe",
+    "app/application/whatsapp_admin.py": "27b91cf2761f6b59bc434ddfefcaacabc888f3f0b510720c8b7f2f2e982848e7",
+    "app/auth.py": "15b40ccf55d30f08eb3c76bc4c7e6580c8d04384333256adac840612824e9757",
+    "app/domain/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/domain/orders.py": "63e29b138cfe351ed0e8bec8a299c0d509965c2cf26b64a649cc91d781eb6288",
+    "app/domain/parsing.py": "f5b9fb5faaafcf786d5ae320b8d78edc0ab946af90d9b2fe49ddfeb8b6b7f9e7",
+    "app/domain/summaries.py": "d6a26038b6e0eb0dacc9d1e7cdbee08219e3caaa44ac32446dd5b76fbf263f3d",
+    "app/extensions.py": "252564fab7a378eea787bfdb91bd6ba5cecbcfb74f2e6bcb508954e18a19d847",
+    "app/infrastructure/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/infrastructure/accounts.py": "9a0737df81cd38ff1cc2ff69254dccab603356fed37816aae9f092465bf984fb",
+    "app/infrastructure/bridge_client.py": "987388b439cd78e4190b05f94a3d34dfa83aeda8ef6882b5b1543e630e327ca4",
+    "app/infrastructure/core.py": "a661134af87cf4997400a4b9425fad1c7735235e9372e733430e1f7ab7da08e5",
+    "app/infrastructure/finance.py": "a03be0084c15014002d1bbd36d58021c4d5281ea2a4f203d5590d6c76a230686",
+    "app/infrastructure/inbox.py": "dc6363f17ee2ac63b607622b9fa247baaf618b4061d1c4ec8c3784af6880cd38",
+    "app/infrastructure/legacy_reconciliation.py": "b0de1ccc033d2ca94030c974166c13aa114243c020bfde92ab424b6069444161",
+    "app/infrastructure/models.py": "9920053c0610a5124787232ba2081c9519edbbd7a263a1203133cef5f8d74b2c",
+    "app/infrastructure/participants.py": "61a9f1a847a81615bf23ff5675707df529d2ae0e5518d6627e80b569487fad08",
+    "app/infrastructure/publications.py": "050440a890bfabf1a5db9bfd7dc683d6c2e3404ec7a9426d8a66e3e3f56ab619",
+    "app/infrastructure/reporting.py": "48899fcd8b008c99b6e411a8417bf19588cc6b2d5e77d22390d9f4b7e067b325",
+    "app/infrastructure/whatsapp_admin.py": "b7944ed2fc40d384b3d4ab379dc2a20fdf87b33bf78ae0500f4ddd0190f94e96",
+    "app/infrastructure/whatsapp_models.py": "6d723466cf822418163567971db7a10e1c0ede9a42df58235b50b377112ffb09",
+    "app/infrastructure/workbooks.py": "9f0a6baaf84a3e35a08e95fcce8855cb095542caed49b3ab61f6d526682f300d",
+    "app/models.py": "d6417244bee900146ae083a63d4c1ed2edd93c2a22794329bd93fc578f8816e5",
+    "app/operations.py": "d106ca573621569c16d84695c3f82d968ec1ce3b6335261b81377a6556f9fe09",
+    "app/presentation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/presentation/report_routes.py": "49378bd89d8fa080e250ead39e1e18a4268a97639e0c0dda3ec428259ed58470",
+    "app/presentation/security.py": "56335587d96f51c4d55bb1614c8c40d98b36ff11bc5a13c4cbb92fb7fd073adb",
+    "app/reconciliation.py": "0171d536aaf89ef0523903083ce49ab7eaa74bc0e785953008e7ad4895d09758",
+    "app/reports.py": "c2d58d9dca474d1fb50a5e66c1b840e21237898826f3d4853279a1909e25e45f",
+    "app/routes.py": "8a69564ec2545386f7667b51c46087f014c1a2a501d2210559c5e1eec5b06138",
+    "app/services.py": "d26c023ac362cf46a4a2ea71b23198c0282171981ceb77fcf942e6ad4b82aad3",
+    "app/static/whatsapp.js": "6992224f5eb7a0663c0135499dbb75bdb18c35ad2ec5756cb3ac81a3734bf22e",
+    "app/templates/base.html": "7c2ce9d51f47d8a03dfe4a9541bb52e41ef103c369e73f525852b0594359714a",
+    "app/templates/change_password.html": "b6986ca71777c01441a0989dd14ae7fa1d971090dfb6ae0c43cba8932949f468",
+    "app/templates/dashboard.html": "d7a9f63c82f517572c83c522c253d80971b12e0ad4039eb37263654b8cb606d9",
+    "app/templates/login.html": "af690da4483514d2dea80be0c7284b8bae58fe7c80613ab359624f89dd87f39f",
+    "app/templates/operations.html": "c0998deb0a07b1166d85fc0fc69a3821cc1c9987a0be92af5f959a6c48997b90",
+    "app/templates/order_reports.html": "b5390790df8cb245750401fc3f0fce0cf9d6599ccecbfafa7897b01e6c744da5",
+    "app/templates/participant.html": "5e16a24193ff55dd8875050d9553b9bbfac85240e61c2d89f9245b9ad3ee21b5",
+    "app/templates/whatsapp.html": "d8816c9de9f6d604f45d238608f94b2c69bf8f5a2ebbd2088a1778f2b999cd89",
+    "app/templates/whatsapp_counts.html": "b80ea9e297f23a2d30f070fd8923ab000faf4643288a2ae5c25f0f13b123e364",
+    "app/templates/whatsapp_detail.html": "ebf49dd9ef19efc62be50d9df18b94f0afdb09dddea12ad6b0fabb085a4c26d4",
+    "app/templates/whatsapp_totals.html": "0b715ec40489ecf98e44c4b92f6c42dbfb14a9d38db1e36f6218149392fc3750",
+    "app/whatsapp_models.py": "100275db9a5cc2668da3efb4df92aa3e1553c6067c84a1542d28fbe38ed341e8",
+    "app/whatsapp_parser.py": "ba6dc052cfc34fdf6df4f8f9fda158a956206fa15e51a84b8524de4373721ed6",
+    "app/whatsapp_routes.py": "d579f6e93d9a6d035d6545ee352db85fdb04678d4d0498774ffe498e1f177edc",
+    "app/whatsapp_service.py": "dc312266357336d7e19195f6190c77ee241e21601db6f8a04e7e160bb007af2d",
+    "benchmark-results.json": "1300466c39ded70c85c6a21c86c9865c665c2f561330590912c3e1b82c450e02",
+    "bridge/BAILEYS-LICENSE.txt": "0d814b3b15ae28401c32d3d0042c9537f1216be765850fdb36ad507a3cc90aa4",
+    "bridge/envelope.mjs": "09cfdcb136ba327057cf13487190c740e2e8f047a67627cbf59eea7ea2edf084",
+    "bridge/group-discovery.mjs": "749f464fa06d36cab1e27e9ec21d8c1fdb986ffa5e3042dd1d5dfad7a20734e2",
+    "bridge/index.mjs": "d2ca23231c854956d0e56d68e53da6d9e86ab1ecd4fb89f70e03dde9e12e86c2",
+    "bridge/package-lock.json": "556ad2cca5339a6d5d9504537a01f16df63b624fea0dc4ed5c58f7a1ed90a739",
+    "bridge/package.json": "20ce82b32834b39c457e47f854996571d86b812c583f943ca220075812b05d8e",
+    "bridge/pairing.mjs": "a59f69d2ec43c799c84d32385511374f769b1a35748b09cbb5abb7528cea9382",
+    "bridge/patch-baileys.mjs": "2433b527185bce0383439bf907e51b54c4e8e07b53c4becefdbe970e555f36b5",
+    "bridge/publications.mjs": "fd2e91cf6631b93a4d80101a0c4f51c54804dfc246406ed5014ed27876832150",
+    "bridge/session-crypto.mjs": "ced6d1c0e6c14e5615da0a1bb2c5ef55f25d5c81a9392a4c2dd4d61cd1d9684d",
+    "bridge/test/envelope.test.mjs": "9353e25c73714834facebc9092dbc149f034c809e5522808a76291685bace4d7",
+    "bridge/test/group-discovery.test.mjs": "d5c69ac7c5e7ab725045950c9bd89bc8e6e18b85d158b3648208af502803b544",
+    "bridge/test/pairing.test.mjs": "1c9b1de5c67f747cd681f8d6f8682a8f8f0a82ee07ee6429aa568899c2add6d5",
+    "bridge/test/publications-postgres.mjs": "efd62dca809eaa5cfcf62ba5fe955529b8f061c3f5c23555d3a2741dd9f4afc2",
+    "bridge/test/publications.test.mjs": "ef2fd83e80718e35026fe4aa09a194dce00a573516261c1ecb69745c23acdf95",
+    "bridge/test/session-crypto.test.mjs": "50d871239c951053d1e88407948d0f45237b38127b1480e4b815316da3d6df54",
+    "deploy/apply_layered_migration.py": "2106c7b67393a9ec1b1b5858eabd1eb82a542bd670453fe7c0c6162b57b0a377",
+    "deploy/nginx-ip.conf.example": "4011547528698de2acaaa9908aacc2795ca8023e21ba357da9a9473eaf78a286",
+    "deploy/nginx.conf.example": "b5b5169883cf0164e6f771c6156855be931be70e2517d59ae4450f47951305e7",
+    "deploy/release-layered.sh": "18561b2139432cfd4c808e3fb59ce121ea3a2c57a9bb310b50db8922773ed129",
+    "deploy/tiffintrack-summary.cron.example": "8908a5c05ee8844f4a4cd911b8f0195b748cad6ec9fda1188de18ddf09951a5e",
+    "deploy/tiffintrack.cron.example": "f6743234c39232c99f6a05fdbabcfe4ac8184264d26759958902adf4bef8bb99",
+    "docker-compose.yml": "129bec193fc440f3e5e272b41f89035aa93342fa1c0adb1319cbaf8122ef0309",
+    "evidence/TiffinTrack-Final-Source-Inventory.json": "c9543db2a0a264d9991e488dd6f43ba70ca963737b2fe2512fb8a3940e8ce8d3",
+    "evidence/TiffinTrack-Final-baseline.log": "5f591070752863a9cdf87168e416c00f3411fbcb1a08601caaab04c3bf270e57",
+    "evidence/TiffinTrack-Final-extra.log": "2af5b4e99f9ed3947a1dc6d63635bfa459f40d6731f356d27ba97d1b1eee3e95",
+    "evidence/TiffinTrack-Final-inbox-performance.json": "041a8350eae3adc9ee138bcbcac7d43f1adfe8e9b400c5299ee3838a4fc46695",
+    "evidence/TiffinTrack-Final-live.log": "4a2dd7f41e538ec111f0c971544232dddd746b034b5d6224a40a37e9b3245167",
+    "evidence/TiffinTrack-Final-performance.json": "f84a399a2f88865c880afa59cba7c64b9d923461ee913ae010dd86b09c2169b8",
+    "evidence/TiffinTrack-Final-recovery.log": "03e22853a42a06d899780aa384eebbcb9453c8988c79e5c997a26b17e96ac74c",
+    "evidence/TiffinTrack-Final-restore.log": "bed69305b9ba8aa69a700e77db18a01d46a00445d98f723b1d0cb989f15e91f1",
+    "evidence/TiffinTrack-Final-tests.log": "a1ccd4b957782265afd2a42ba4e694ced0f87b2d03fd1622c29429eaee94f99a",
+    "manage.py": "a1e8af02d5f2f95a4827391a28005efca56d53402b04d929c98aed8a4dd0c266",
+    "migrations/README": "e415e2d4917fcbd81fe20fdb1876a5f8837b4ec06c145c75dabaf17dd9c0fdc5",
+    "migrations/alembic.ini": "09d639d5ba229f2f6865be92bdbda1d8a82c1a8808f993f04ebe1c1ad5da7b0a",
+    "migrations/env.py": "14b6036b61eb29d4afb2f65d16c1a99d4acb312d21a1b8321d8d09a5891fc7da",
+    "migrations/script.py.mako": "cf41a8f1ac88abd9ea81c577497ab09722ec59e6d22d34d33f4824be72133014",
+    "migrations/versions/0001_initial.py": "f7db6c9a7c01801e3b0d4edaaef3dc1077ac9fc46dc506668a132d5586f72b83",
+    "migrations/versions/0002_integrity_and_login_limits.py": "18f10cd5bf064ebdadaa36ac8d5da91bf97a67a545e1ec3aa5a8e3a4e7a4d758",
+    "migrations/versions/0003_submission_and_email.py": "554748807a0ae104b5e5879c1010ace4aa44b729964f022717db82f1c93b07e9",
+    "migrations/versions/0004_whatsapp.py": "b7277688bbf040232b227883f0fdbeade70c0e5d92b451d5a5a16b189558b9da",
+    "migrations/versions/0005_participants_and_summaries.py": "129e9f8dd3352a1aaba1b4fcbf5bbeb287c4f1b34c43bdcb43d66fae8001f6cd",
+    "pyproject.toml": "b6445d98fb08c7d259fea3db0e5b95bb32757b2f2e102d04ca662ec14f37a38a",
+    "pytest.ini": "b160d82f7811555051f8966d8e02750a985227c1d022208c784e606946f2eada",
+    "requirements-dev.txt": "cb1d384ace51be2d80ad3a7912388deef07a8aece0c2b4808eceae01af968d33",
+    "requirements.txt": "eaa04f59d7f7b4cbb7a068a06c762af4687464e5f1389088d7c3c591fe787ab9",
+    "scripts/backup_postgres.sh": "fc1301dda13870d21b957734e8fc48cbf30e40a71a96c56f528e37a28ace0c19",
+    "scripts/benchmark.py": "8a2a616a2c23f0393fd3a25fceab7fcd29daa92019f444884c84feea5fbf393c",
+    "scripts/run_container.py": "4546812f635356dded1a5574c9ce2241b396b0ee9dcf328ec94eb490d94cdd3b",
+    "scripts/weekly_billing.py": "e75cab9c5d5df077419fa28fabb5d62a0d9433ea869cac2afff1fb5f172725ee",
+    "scripts/weekly_summary.py": "eb7c4b13906ec50ba04150f76951b78bad86f4ceb041cce3ff25ece2798543b9",
+    "scripts/whatsapp_worker.py": "d8680cc0569f9768e6bea94ef200ea01270d20914d0b099970b450359b6f5922",
+    "tests/benchmark_whatsapp.py": "045b3e296114e893dab7a4e024cce76fe250fc8b878b3615590c870942f563b0",
+    "tests/conftest.py": "89abe51994da8197a1c08b35a89e11eec7a3c60d8ae7a5df46002966c0ecb105",
+    "tests/test_architecture.py": "45bdeb0b084627afd3fcf803b77e7eb61978887517d8425f3b7d5ce025a93882",
+    "tests/test_audit_remediation.py": "19307e9289fb5f0556b8246b3e040663cb36539c5a1aeb38518be1d7e5c2deec",
+    "tests/test_billing.py": "838ac0a4d651aa6222bf75f6114413cc259bdacb8766bfd0ebc3b570f616e65a",
+    "tests/test_integrity.py": "75bbe0974bda6bec928c0771248a296e0328c0ff19ff34970559a2707182198e",
+    "tests/test_layered_postgres.py": "c7c359c77b09921f7181d5c90264b5c65ba7d440764b18fb9d53743c7bf49c44",
+    "tests/test_layered_reporting.py": "f128ccd3943c9e8a9f8fdb54863773cc3a00cf0c21307c25a2aa517397dcd1a7",
+    "tests/test_postgres_concurrency.py": "a4c0ad86159f87c96aad0ca5586a911433fefdc8424c60944b7adeb8674234fa",
+    "tests/test_postgres_integration.py": "24076c83673f6e475a1c1158753856e2a9105105c90e5d28c967424aeab8544a",
+    "tests/test_postgres_mail.py": "8f23212d796c80d513054111366fe5034ce6e2ca01b5cdda627902157e3b25dd",
+    "tests/test_postgres_reports.py": "5cccec78fae86e692100d26fe9671c58aceec9e345034e8588e85bf68447f078",
+    "tests/test_proxy.py": "38a835251d5690be25810a43cb486cfa6fa62a4851dbf72153aae87e2b1adfa1",
+    "tests/test_routes.py": "2e5c09f6af07c4078a5ea8b0abca9fbd21ba48e404fc7b172654fa4dca25544e",
+    "tests/test_supervisor.py": "d943dc77f00446553774ceb538b06c87157390a0d10b451526237d7ea633d897",
+    "tests/test_whatsapp.py": "a595c8b66722f2e70c59568cc66b8464b5fe214fca9b15038181fa846e3e1692",
+    "tests/test_whatsapp_postgres.py": "e1b3a294112d3207c083da6a26e456e4a58fe3ace852a4f0eb7d5e21284abbbe",
+    "verification/README.md": "ea6efe40d0760a47abbb94dd11f4035181c562778f5e84977fbfb9c066aaae8b",
+    "verification/auth.mjs": "3b77a487ace4b8385682d26c96eade4786c5df730baa1608900fa10a60a5ed79",
+    "verification/baseline.sh": "66ce4fbabcb6a6a9b8422e1176d9be8eb73bf53c343ef92b56521a9e0f6e09aa",
+    "verification/extra.sh": "9bb2fe198452385564611bc1620361696d0d541834ef13f77c7eddf885d51d47",
+    "verification/live.py": "29a0a708a4e4f166c42c8140b191617a6b3ec5fd19732676cf3b5f993830a7c4",
+    "verification/live.sh": "bb31379048da53ccf56a0a3307e9dfe5ca98b34075f2c5d0979e710d63ebb8ac",
+    "verification/recovery.sh": "535231a42241109917e978d2b28af15ce834998307034d52fabdd40331c2d464",
+    "verification/restore.py": "b26b70df166a1a749f0a784779c3400453a3b326f455b64cf13ece44cd62b834",
+    "verification/tests.sh": "e46c6ab7b643c89696694d3272fc7c39a66a2a5733e731d1f55946351c1405e8",
+    "whatsapp-benchmark-results.json": "fd55bf176abc1554c1393894d8a8ce18dd132cddb6a093d6227ef845ffc42f76",
+    "wsgi.py": "d0e730c9f0089d5c52970d5cd0beec0557567936e631f7236b13f4245b7eea2a"
+  },
+  "routes": [
+    {
+      "file": "app/auth.py",
+      "function": "login",
+      "decorator": "auth_bp.route('/login', methods=['GET', 'POST'])"
+    },
+    {
+      "file": "app/auth.py",
+      "function": "logout",
+      "decorator": "auth_bp.post('/logout')"
+    },
+    {
+      "file": "app/auth.py",
+      "function": "change_password",
+      "decorator": "auth_bp.route('/change-password', methods=['GET', 'POST'])"
+    },
+    {
+      "file": "app/operations.py",
+      "function": "dashboard",
+      "decorator": "operations_bp.get('/admin/operations')"
+    },
+    {
+      "file": "app/routes.py",
+      "function": "dashboard",
+      "decorator": "main_bp.get('/legacy-dashboard')"
+    },
+    {
+      "file": "app/routes.py",
+      "function": "dashboard",
+      "decorator": "main_bp.get('/')"
+    },
+    {
+      "file": "app/routes.py",
+      "function": "create_member",
+      "decorator": "main_bp.post('/admin/members')"
+    },
+    {
+      "file": "app/routes.py",
+      "function": "add_order",
+      "decorator": "main_bp.post('/orders')"
+    },
+    {
+      "file": "app/routes.py",
+      "function": "cancel_order",
+      "decorator": "main_bp.post('/orders/<int:order_id>/cancel')"
+    },
+    {
+      "file": "app/routes.py",
+      "function": "mark_paid",
+      "decorator": "main_bp.post('/admin/payments/<int:member_id>/paid')"
+    },
+    {
+      "file": "app/routes.py",
+      "function": "export_xlsx",
+      "decorator": "main_bp.get('/admin/export.xlsx')"
+    },
+    {
+      "file": "app/routes.py",
+      "function": "healthz",
+      "decorator": "main_bp.get('/healthz')"
+    },
+    {
+      "file": "app/whatsapp_routes.py",
+      "function": "dashboard",
+      "decorator": "whatsapp_bp.get('/admin/whatsapp')"
+    },
+    {
+      "file": "app/whatsapp_routes.py",
+      "function": "status",
+      "decorator": "whatsapp_bp.get('/admin/whatsapp/status.json')"
+    },
+    {
+      "file": "app/whatsapp_routes.py",
+      "function": "qr",
+      "decorator": "whatsapp_bp.get('/admin/whatsapp/qr.png')"
+    },
+    {
+      "file": "app/whatsapp_routes.py",
+      "function": "relink",
+      "decorator": "whatsapp_bp.post('/admin/whatsapp/relink')"
+    },
+    {
+      "file": "app/whatsapp_routes.py",
+      "function": "select_group",
+      "decorator": "whatsapp_bp.post('/admin/whatsapp/group')"
+    },
+    {
+      "file": "app/whatsapp_routes.py",
+      "function": "detail",
+      "decorator": "whatsapp_bp.get('/admin/whatsapp/messages/<int:event_id>')"
+    },
+    {
+      "file": "app/whatsapp_routes.py",
+      "function": "review",
+      "decorator": "whatsapp_bp.post('/admin/whatsapp/messages/<int:event_id>/review')"
+    },
+    {
+      "file": "app/whatsapp_routes.py",
+      "function": "retry",
+      "decorator": "whatsapp_bp.post('/admin/whatsapp/errors/<int:inbox_id>/retry')"
+    },
+    {
+      "file": "app/whatsapp_routes.py",
+      "function": "map_member",
+      "decorator": "whatsapp_bp.post('/admin/whatsapp/participants/<int:participant_id>/map')"
+    },
+    {
+      "file": "app/whatsapp_routes.py",
+      "function": "my_counts",
+      "decorator": "whatsapp_bp.get('/my/counts')"
+    },
+    {
+      "file": "app/whatsapp_routes.py",
+      "function": "export",
+      "decorator": "whatsapp_bp.get('/admin/whatsapp/export.xlsx')"
+    },
+    {
+      "file": "app/__init__.py",
+      "function": "health",
+      "decorator": "app.get('/health')"
+    },
+    {
+      "file": "app/presentation/report_routes.py",
+      "function": "dashboard",
+      "decorator": "report_bp.get('/admin/orders')"
+    },
+    {
+      "file": "app/presentation/report_routes.py",
+      "function": "participant",
+      "decorator": "report_bp.get('/admin/participants/<int:participant_id>')"
+    },
+    {
+      "file": "app/presentation/report_routes.py",
+      "function": "reconcile_publication",
+      "decorator": "report_bp.post('/admin/publications/<int:publication_id>/reconcile')"
+    },
+    {
+      "file": "app/presentation/report_routes.py",
+      "function": "new_participant",
+      "decorator": "report_bp.post('/admin/participants')"
+    },
+    {
+      "file": "app/presentation/report_routes.py",
+      "function": "new_order",
+      "decorator": "report_bp.post('/admin/participant-orders')"
+    }
+  ],
+  "postgres_test_configured": false,
+  "postgres_migration_configured": false
+}
