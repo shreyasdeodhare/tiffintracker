@@ -1,0 +1,24 @@
+{
+  "tls_verified_route_statuses": {
+    "/auth/login": 200,
+    "/health": 200,
+    "/": 302,
+    "/admin/orders": 302,
+    "/admin/whatsapp": 302,
+    "/admin/whatsapp/status.json": 302,
+    "/admin/whatsapp/export.xlsx": 302
+  },
+  "denied_loopback_source_status": 403,
+  "unknown_host_rejected": true,
+  "protected_hashes_unchanged": true,
+  "container_identity_image_health_resources_and_ports_unchanged": true,
+  "only_approved_firewall_addition": true,
+  "whatsapp_read_only_status": [
+    "BEGIN",
+    "connected|2|0",
+    "processed|3",
+    "COMMIT"
+  ],
+  "authenticated_login_dashboard_order_mutations": "not exercised; preservation requires no database changes",
+  "lan_client_reachability": "not verified from a separate permitted LAN client"
+}

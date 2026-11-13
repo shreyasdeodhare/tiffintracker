@@ -1,0 +1,2 @@
+# No third-party runtime dependencies. Ubuntu Python 3.12 standard library only.
+# Development/test tooling (separate environment): pytest, ruff.

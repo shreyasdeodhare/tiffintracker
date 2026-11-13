@@ -1,0 +1,51 @@
+{
+  "applications": {
+    "tiffintrack-private": {
+      "proxy": {
+        "milliseconds": 16.3,
+        "ok": true,
+        "status": 200,
+        "tcp": true
+      },
+      "upstream": {
+        "milliseconds": 5.7,
+        "ok": true,
+        "status": 200,
+        "tcp": true
+      }
+    }
+  },
+  "canaries": [
+    {
+      "milliseconds": 2.5,
+      "ok": true,
+      "status": 200,
+      "tcp": true
+    },
+    {
+      "milliseconds": 1.4,
+      "ok": true,
+      "status": 302,
+      "tcp": true
+    },
+    {
+      "milliseconds": 0.4,
+      "ok": true,
+      "status": 200,
+      "tcp": true
+    },
+    {
+      "milliseconds": 5.3,
+      "ok": true,
+      "status": 200,
+      "tcp": true
+    },
+    {
+      "milliseconds": 5.2,
+      "ok": true,
+      "status": 302,
+      "tcp": true
+    }
+  ],
+  "nginx_active": true
+}

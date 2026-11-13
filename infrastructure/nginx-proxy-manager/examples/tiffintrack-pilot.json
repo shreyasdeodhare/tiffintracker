@@ -1,0 +1,44 @@
+{
+  "name": "tiffintrack-private",
+  "enabled": true,
+  "upstream": {
+    "host": "127.0.0.1",
+    "port": 8087
+  },
+  "listen": {
+    "mode": "private",
+    "address": "192.168.1.101",
+    "port": 18443
+  },
+  "server_names": [
+    "192.168.1.101"
+  ],
+  "allowed_networks": [
+    "192.168.1.0/24"
+  ],
+  "websocket": false,
+  "health_check": {
+    "enabled": true,
+    "path": "/auth/login",
+    "expected_statuses": [
+      200
+    ],
+    "timeout": 5
+  },
+  "proxy_settings": {
+    "max_body_size": "1m",
+    "connect_timeout": 5,
+    "read_timeout": 60,
+    "send_timeout": 60
+  },
+  "tls": {
+    "certificate": "/etc/tiffintrack/tls/server.crt",
+    "key": "/etc/tiffintrack/tls/server.key",
+    "ca_file": "/etc/tiffintrack/tls/server.crt"
+  },
+  "rate_limit": {
+    "path": "/auth/login",
+    "requests_per_minute": 10,
+    "burst": 15
+  }
+}

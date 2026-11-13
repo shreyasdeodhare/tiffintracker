@@ -1,0 +1,54 @@
+{
+  "candidate_valid": true,
+  "nginx_reloaded": false,
+  "production_files_changed": false,
+  "manual_config_hashes": {
+    "/etc/nginx/nginx.conf": "48c6a4ec1e1fd28ccf968490f07e34a1d7f755793b2108a3ed8670b1ee2a0aa2",
+    "/etc/nginx/mime.types": "36c77daa2d85803e87c91ba723dd2bc6aaa6543ae4bd4a569034a7bf8bce464d",
+    "/etc/nginx/conf.d/tiffintrack-ip.conf": "f7494028cc4cc483921f3d372b5e1278c54c58d61ee6909b6c293d8dceb5f1b6",
+    "/etc/nginx/sites-enabled/default": "ce0901350a021608139b5639cf4ccd7717bef8c3a9e4f79031eb46386b67b03f"
+  },
+  "candidate": "/var/tmp/proxy-manager-candidate-n4wn6_hl/staging/5a882e210f0a474b8220ff16577413c2/08cdfcae237f26e40849389a2dee772439eff20c8b5ee8b3f5aa22d60b0a38bb.conf",
+  "preservation_canaries": [
+    {
+      "tcp": true,
+      "ok": true,
+      "status": 200,
+      "milliseconds": 1.9
+    },
+    {
+      "tcp": true,
+      "ok": true,
+      "status": 302,
+      "milliseconds": 1.1
+    },
+    {
+      "tcp": true,
+      "ok": true,
+      "status": 200,
+      "milliseconds": 0.4
+    },
+    {
+      "tcp": true,
+      "ok": true,
+      "status": 200,
+      "milliseconds": 8.6
+    },
+    {
+      "tcp": true,
+      "ok": true,
+      "status": 302,
+      "milliseconds": 5.2
+    }
+  ],
+  "upstream": {
+    "tiffintrack-private": {
+      "upstream": {
+        "tcp": true,
+        "ok": true,
+        "status": 200,
+        "milliseconds": 0.9
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-11-13T11:46:38.519634+00:00",
+  "nginx": "active",
+  "nginx_test_passed": true,
+  "manual_and_protected_hashes": {
+    "/etc/nginx/nginx.conf": "48c6a4ec1e1fd28ccf968490f07e34a1d7f755793b2108a3ed8670b1ee2a0aa2",
+    "/etc/nginx/sites-available/default": "ce0901350a021608139b5639cf4ccd7717bef8c3a9e4f79031eb46386b67b03f",
+    "/etc/nginx/conf.d/tiffintrack-ip.conf": "f7494028cc4cc483921f3d372b5e1278c54c58d61ee6909b6c293d8dceb5f1b6",
+    "/home/support/tiffintrack/docker-compose.yml": "129bec193fc440f3e5e272b41f89035aa93342fa1c0adb1319cbaf8122ef0309",
+    "/home/support/tiffintrack/Dockerfile": "e071ae9c82cf0b817072b79a71022fc49d779a26a3139b834c470bfc907075ec",
+    "/etc/cron.d/tiffintrack": "487b967a35e3da5875f8c7ee32c99dce9d45b799d37760a86e7834ad60dace37",
+    "/etc/cron.d/tiffintrack-summary": "8908a5c05ee8844f4a4cd911b8f0195b748cad6ec9fda1188de18ddf09951a5e"
+  },
+  "enabled_sites": {
+    "/etc/nginx/sites-enabled/default": "/etc/nginx/sites-available/default"
+  },
+  "nginx_conf_d": [
+    "tiffintrack-ip.conf"
+  ],
+  "container": {
+    "id": "dc64392607d3b04a88967f97f24b5acc7a5085f980c3b15460153e6267074a4e",
+    "image": "sha256:7881a32451f8ae01e5eec06620ba156d52be9251c058b0a05dbd292c99205923",
+    "configured_image": "tiffintrack:stabilization-20261112",
+    "running": true,
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8087"
+        }
+      ]
+    },
+    "memory": 536870912,
+    "nano_cpus": 1500000000,
+    "pids_limit": 128
+  },
+  "addresses": [
+    {
+      "interface": "lo",
+      "addresses": [
+        "127.0.0.1",
+        "::1"
+      ]
+    },
+    {
+      "interface": "eno1",
+      "addresses": [
+        "192.168.1.101",
+        "2402:e280:3eaf:4d:ba3a:337a:551:4a56",
+        "2402:e280:3eaf:4d:8aae:ddff:fead:a128",
+        "fe80::8aae:ddff:fead:a128"
+      ]
+    },
+    {
+      "interface": "tailscale0",
+      "addresses": [
+        "100.72.251.13",
+        "fd7a:115c:a1e0::3833:fb0e",
+        "fe80::1519:ea2b:78a6:ebf2"
+      ]
+    }
+  ],
+  "listening_tcp_sha256": "8df485c46db3c3f94a7ce4d3235ee55c398638e7096fe9017cf1689e20788466",
+  "ufw_sha256": "3bfc11624bfe1138e88928c3be22881b27d643cb295bb71ea52b45b61dbd5d6a",
+  "ufw_pilot_lines": [],
+  "logs_sample": {
+    "lines": 70,
+    "component_exits": 0,
+    "errors": 0
+  },
+  "production_app_or_database_writes": false
+}

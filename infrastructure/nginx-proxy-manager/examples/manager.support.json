@@ -1,0 +1,65 @@
+{
+  "root": "/etc/nginx/apps.d",
+  "nginx": "/usr/sbin/nginx",
+  "nginx_config": "/etc/nginx/nginx.conf",
+  "systemctl": "/usr/bin/systemctl",
+  "ss": "/usr/bin/ss",
+  "ip": "/usr/sbin/ip",
+  "bridge": "/etc/nginx/conf.d/90-proxy-manager.conf",
+  "certificate_roots": [
+    "/etc/tiffintrack/tls"
+  ],
+  "approved_upstreams": [
+    {
+      "host": "127.0.0.1",
+      "port": 8087
+    }
+  ],
+  "canaries": [
+    {
+      "host": "127.0.0.1",
+      "port": 8087,
+      "path": "/health",
+      "statuses": [
+        200
+      ]
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 8087,
+      "path": "/",
+      "statuses": [
+        302
+      ]
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 80,
+      "path": "/",
+      "statuses": [
+        200
+      ]
+    },
+    {
+      "host": "192.168.1.101",
+      "port": 443,
+      "path": "/auth/login",
+      "statuses": [
+        200
+      ],
+      "tls": true,
+      "ca_file": "/etc/tiffintrack/tls/server.crt"
+    },
+    {
+      "host": "192.168.1.101",
+      "port": 443,
+      "path": "/admin/orders",
+      "statuses": [
+        302
+      ],
+      "tls": true,
+      "ca_file": "/etc/tiffintrack/tls/server.crt"
+    }
+  ],
+  "audit_log": "/opt/nginx-proxy-manager/logs/audit.log"
+}
