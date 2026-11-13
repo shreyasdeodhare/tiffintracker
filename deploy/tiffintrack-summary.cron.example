@@ -1,0 +1,5 @@
+# Install only after migration and publication enablement have been approved.
+# This deployment's host timezone is Asia/Kolkata. Verify it before installation.
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+0 14 * * 5 root cd /home/support/tiffintrack && flock -n /run/lock/tiffintrack-summary.lock docker compose exec -T tiffintrack python -m scripts.weekly_summary >> /var/log/tiffintrack-summary.log 2>&1

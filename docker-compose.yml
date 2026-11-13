@@ -1,0 +1,43 @@
+services:
+  tiffintrack:
+    image: tiffintrack:stabilization-20261112
+    build: .
+    container_name: tiffintrack
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      TRUST_PROXY: "true"
+    ports:
+      - "127.0.0.1:8087:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    init: true
+    pids_limit: 128
+    mem_limit: 512m
+    cpus: 1.5
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - tiffintrack_net
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+networks:
+  tiffintrack_net:
+    ipam:
+      config:
+        - subnet: 10.250.252.0/24

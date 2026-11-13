@@ -1,0 +1,4 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+0 2 * * * root flock -n /run/lock/tiffintrack-backup.lock runuser -u postgres -- env BACKUP_DIR=/var/backups/tiffintrack PGHOST=/var/run/postgresql PGUSER=postgres PGDATABASE=tiffintrack /bin/bash /usr/local/sbin/tiffintrack-backup >> /var/log/tiffintrack-backup.log 2>&1
+0 3 * * * root cd /home/support/tiffintrack && docker compose exec -T tiffintrack flask --app manage.py prune-login-attempts >> /var/log/tiffintrack-maintenance.log 2>&1

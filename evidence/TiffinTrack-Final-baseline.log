@@ -1,0 +1,67 @@
+2026-11-12T23:03:45+05:30
+PRODUCTION_CODE_MANIFEST_MATCH
+image=tiffintrack:stabilization-20261112 health=healthy restarts=0 oom=false memory=536870912 cpus=1500000000 pids=128 user=app readonly=true restart=unless-stopped
+cpu=0.29% memory=303.8MiB / 512MiB pids=19
+PID                 COMMAND
+1027691             docker-init
+1027844             python
+1027897             gunicorn
+1027902             MainThread
+1027904             python
+1028471             gunicorn
+1028490             gunicorn
+schema|0005_participants
+counts|{"users" : 2, "participants" : 1, "orders" : 0, "events" : 1, "inbox" : 1, "payments" : 0, "publications" : 0, "session_records" : 869}
+tracking|connected|Amanora 507B Office The Meal Habit|t|1|0
+inbox|processed|1
+events|review|1
+db_connections|active|1
+db_connections|idle|4
+constraints|f|21
+constraints|c|19
+constraints|u|10
+constraints|p|19
+indexes|53
+intake_latency_seconds|1||
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+0 2 * * * root flock -n /run/lock/tiffintrack-backup.lock runuser -u postgres -- env BACKUP_DIR=/var/backups/tiffintrack PGHOST=/var/run/postgresql PGUSER=postgres PGDATABASE=tiffintrack /bin/bash /usr/local/sbin/tiffintrack-backup >> /var/log/tiffintrack-backup.log 2>&1
+0 3 * * * root cd /home/support/tiffintrack && docker compose exec -T tiffintrack flask --app manage.py prune-login-attempts >> /var/log/tiffintrack-maintenance.log 2>&1
+# Install only after migration and publication enablement have been approved.
+# This deployment's host timezone is Asia/Kolkata. Verify it before installation.
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+0 14 * * 5 root cd /home/support/tiffintrack && flock -n /run/lock/tiffintrack-summary.lock docker compose exec -T tiffintrack python -m scripts.weekly_summary >> /var/log/tiffintrack-summary.log 2>&1
+Asia/Kolkata
+fc1301dda13870d21b957734e8fc48cbf30e40a71a96c56f528e37a28ace0c19  /usr/local/sbin/tiffintrack-backup
+fc1301dda13870d21b957734e8fc48cbf30e40a71a96c56f528e37a28ace0c19  scripts/backup_postgres.sh
+700 postgres /var/backups/tiffintrack
+755 root /usr/local/sbin/tiffintrack-backup
+tiffintrack-20261111T193150Z.dump 41063 bytes 2026-11-12 01:01
+tiffintrack-20261111T203001Z.dump 219370 bytes 2026-11-12 02:00
+tiffintrack-20261112T101115Z.dump 228132 bytes 2026-11-12 15:41
+/var/backups/tiffintrack/tiffintrack-20261111T180750Z.dump: OK
+/var/backups/tiffintrack/tiffintrack-20261111T193150Z.dump: OK
+/var/backups/tiffintrack/tiffintrack-20261111T203001Z.dump: OK
+/var/backups/tiffintrack/tiffintrack-20261112T101115Z.dump: OK
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  937G  737G  154G  83% /
+/dev/nvme0n1p2  937G  737G  154G  83% /
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          144       86        34.9GB    6.302GB (18%)
+Containers      119       84        3.567GB   1.398MB (0%)
+Local Volumes   843       47        185.8GB   22.42GB (12%)
+Build Cache     351       185       8.908GB   127.6MB
+notAfter=Feb  9 18:06:57 2027 GMT
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+State  Recv-Q Send-Q                          Local Address:Port  Peer Address:PortProcess
+LISTEN 0      4096                                127.0.0.1:8087       0.0.0.0:*          
+LISTEN 0      511                                   0.0.0.0:443        0.0.0.0:*          
+LISTEN 0      4096                                  0.0.0.0:5432       0.0.0.0:*          
+LISTEN 0      4096                                     [::]:5432          [::]:*          
+OFFSERVER_BACKUP_NOT_FOUND_IN_APPLICATION_CRON_OR_SCRIPT
+/health status=200 seconds=0.008914
+/auth/login status=200 seconds=0.015774
+/admin/orders status=302 seconds=0.013405
+READ_ONLY_PRODUCTION_BASELINE_COMPLETE

@@ -1,0 +1,7 @@
+Flask-Migrate migration directory.
+Initialize once after installing dependencies:
+  flask --app wsgi:app db init
+Then generate and apply migrations:
+  flask --app wsgi:app db migrate -m "initial schema"
+  flask --app wsgi:app db upgrade
+Commit generated migration files to source control.

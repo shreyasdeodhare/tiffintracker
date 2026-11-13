@@ -1,0 +1,20 @@
+id,severity,area,status,evidence_or_blocker,next_action
+A01,Low,Running image and schema,Verified,Exact image hash and production code manifest matched; schema 0005_participants,Preserve working release
+A02,Low,Python quality and regression,Verified,Compileall and Ruff passed; 96 tests passed with both PostgreSQL URLs,No code rewrite required
+A03,Low,Bridge and outbox,Verified isolated,24 npm tests plus PostgreSQL concurrent mock-transport test passed,Observe scheduled real delivery separately
+A04,Low,Identity and duplicate protection,Verified automated,Stable aliases guests identical names source replay splits and concurrency regressions passed,Preserve current guards
+A05,Low,Financial reporting and Excel,Verified automated and read-only live,Records quantity Decimal prices cancellation and workbook agreement passed,Check same path against genuine orders when available
+A06,Low,Weekly schedule and retired email,Verified,Friday 14:00 Asia/Kolkata cron; retired email command absent,Leave schedule unchanged
+A07,Low,Roles CSRF cookies and headers,Verified automated and HTTPS,Authorization regressions plus actual HTTPS redirect cookie header and CSRF checks,Do not confuse these with password browser acceptance
+A08,Operationally pending,Current browser password login,Pending,Current production credentials/access unavailable for browser acceptance; no reset performed,Verify through authorized current-user login
+A09,Operationally pending,Five genuine orders,Pending,Production has zero confirmed orders and one review,Observe normal group activity without requesting artificial orders
+A10,Operationally pending,Genuine edit and cancellation,Pending,No genuine order lifecycle available; synthetic regressions passed,Inspect naturally occurring revision or cancellation
+A11,Operationally pending,First weekly delivery,Pending,No production publication; first scheduled Friday 13 November 2026 14:00 IST,Observe normal cron and saved snapshot acknowledgement without synthetic send
+A12,Operationally pending,Real-message capacity and latency,Pending,Quiet runtime samples only; historical inbox lacks usable processed timestamp,Measure during genuine message processing
+A13,Low,Native local backup and restore,Verified,Installed script checksum mode 600 archive validation and two isolated restores passed,Keep restricted local recovery copies
+A14,High,Off-server backup and independent alerts,Not verified,No application destination or successful remote copy verified,Supply approved destination recovery-key custody and restore evidence
+A15,High,Shared-host PostgreSQL network exposure,Owner action pending,All-interface listener and global UFW 5432 allow; TiffinTrack HBA rejects off-network access,Inventory other applications and obtain approval before restricting shared host
+A16,Medium,Host monitoring and storage,Observed limited window,Disk 83 percent with about 154 GiB free; sampled logs show no component exits or processing errors,Establish off-server alerts and ongoing monitoring
+A17,Operationally pending,Public domain,Deferred,No approved hostname ownership DNS plan or public acceptance,Follow DOMAIN-READINESS.md after private acceptance and DNS approval
+A18,Low,Active documentation contradictions,Corrected,README candidate wording and ACCESS stale-password or persistent-tunnel assumptions corrected,Use final audit recovery and domain guides
+A19,Low,Preservation and architecture,Verified,No runtime deployment schema change relink business fixture or architecture change in final audit,Retain rollback image and linked session

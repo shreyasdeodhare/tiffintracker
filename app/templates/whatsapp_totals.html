@@ -1,0 +1,6 @@
+{% for period, rows in summaries.items() %}
+<section class="card card-body mb-3"><h2 class="h5">{{ period|title }} totals</h2>
+<p>Group: {{ rows|sum(attribute='orders') }} order records · <strong>{{ rows|sum(attribute='quantity') }} tiffins</strong></p>
+<div class="table-responsive"><table class="table table-sm"><thead><tr><th>Member</th><th>Order records</th><th>Tiffins</th><th>Amount</th></tr></thead><tbody>
+{% for row in rows %}<tr><td>{{ row.name }} (#{{ row.id }})</td><td>{{ row.orders }}</td><td>{{ row.quantity }}</td><td>₹{{ row.amount|money }}</td></tr>{% else %}<tr><td colspan="4">No confirmed orders in this period.</td></tr>{% endfor %}
+</tbody></table></div></section>{% endfor %}

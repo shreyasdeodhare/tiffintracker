@@ -1,0 +1,4 @@
+/var/backups/tiffintrack/final-acceptance-20261112/consistent-production.dump: OK
+ISOLATED_RESTORE_ALL_TABLE_COUNTS_AND_CONTENT_HASHES_MATCH {"alembic_version": 1, "email_logs": 0, "login_attempts": 2, "order_audits": 0, "orders": 0, "participant_audits": 1, "payments": 0, "publication_audits": 0, "reconciliation_runs": 0, "summary_parts": 0, "summary_publications": 0, "users": 2, "wa_audits": 1, "wa_auth": 869, "wa_connection": 1, "wa_events": 1, "wa_identities": 2, "wa_inbox": 1, "wa_participants": 1}
+RESTORED_APPLICATION_RECONCILIATION_AND_EXCEL_PASS {'records': 0, 'quantity': 0, 'amount': Decimal('0.00')}
+LIVE_DATABASE_NOT_RESTORED_OR_MODIFIED

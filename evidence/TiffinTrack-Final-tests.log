@@ -1,0 +1,44 @@
+........................................................................ [ 75%]
+........................                                                 [100%]
+96 passed in 28.95s
+All checks passed!
+87 files already formatted
+
+> tiffintrack-whatsapp-bridge@1.0.0 test
+> node --test test/*.test.mjs
+
+✔ replayed originals retain the same event key (1.177193ms)
+✔ edits and deletes are distinct durable events (0.195723ms)
+✔ non-group messages are rejected (0.182535ms)
+✔ Baileys editedMessage updates remain edits after content unwrap (0.09559ms)
+✔ selected group does not trigger optional all-group API requests (2.9499ms)
+✔ WhatsApp group-list 500 is contained and backs off without killing receiver (0.740668ms)
+✔ concurrent metadata refreshes do not duplicate requests (0.35871ms)
+✔ unpaired registration refresh handles companion_reg_refresh without spending a reference (2.040146ms)
+✔ unpaired registration refresh handles pair-device-rotate-qr without spending a reference (0.289449ms)
+✔ refresh never rotates credentials after an identity has been paired (0.265108ms)
+✔ malformed refresh notification does not change pairing material (0.186159ms)
+✔ WhatsApp version discovery never falls back below the known good revision (1.07807ms)
+✔ dependency patch is idempotent and refuses an unexpected upstream source (0.422279ms)
+✔ notification ack works before pairing, while message ack still requires identity (0.572742ms)
+✔ weekly sender commits claim before sending and never replays sent part (1.161866ms)
+✔ uncertain transport remains unknown and is not automatically retried (0.858812ms)
+✔ missing confirmation is unknown rather than sent (0.290892ms)
+✔ disabled or disconnected publisher cannot send (0.324239ms)
+✔ interrupted claims are made unknown on receiver restart (0.300472ms)
+✔ send deadline preserves unknown outcome and prevents a retry (8.033143ms)
+✔ unexpected transport identity is not marked successful (1.962485ms)
+✔ session state survives authenticated encryption round trip (3.35572ms)
+✔ tampered session ciphertext is rejected (1.026087ms)
+✔ the wrong session key cannot decrypt credentials (0.52622ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 95.367925
+POSTGRES_CONCURRENT_OUTBOX_CLAIM_AND_MOCK_TRANSPORT_PASSED; no WhatsApp connection used
+STABILIZATION_ISOLATED_POSTGRES_AND_OUTBOX_VERIFICATION_COMPLETE
+FINAL_EXISTING_TESTS_AND_COMPOSE_PASSED

@@ -1,0 +1,20 @@
+{% extends "base.html" %}{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3"><div><h1 class="h3">Weekly dashboard</h1><div class="text-muted">{{ week_start }} to {{ week_end }}</div></div>
+{% if current_user.role == 'admin' %}<a class="btn btn-outline-success" href="{{ url_for('main.export_xlsx', week=week_start) }}">Export Excel</a>{% endif %}</div>
+
+<div class="d-flex gap-2 mb-3"><a class="btn btn-outline-secondary btn-sm" href="{{ url_for('main.dashboard', week=previous_week_start) }}">Previous week</a>{% if not current_week %}<a class="btn btn-outline-secondary btn-sm" href="{{ url_for('main.dashboard', week=next_week_start) }}">Next week</a>{% endif %}</div>
+<div class="row g-3"><div class="col-lg-5"><div class="card card-body"><h2 class="h5">Record tiffin order</h2>
+<form method="post" action="{{ url_for('main.add_order') }}"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+{% if current_user.role == 'admin' %}<label class="form-label">Member</label><select class="form-select mb-2" name="member_id" required>{% for m in members %}{% if m.role == 'member' and m.is_active %}<option value="{{ m.id }}">{{ m.name }}</option>{% endif %}{% endfor %}</select>{% endif %}
+<input type="hidden" name="submission_key" value="{{ submission_key }}"><label class="form-label">Date</label><input class="form-control mb-2" type="date" name="order_date" value="{{ today }}" required>
+<label class="form-label">Quantity</label><input class="form-control mb-3" type="number" name="quantity" value="1" min="1" max="20" required>
+<button class="btn btn-primary">Save order</button></form></div></div>
+<div class="col-lg-7"><div class="card card-body"><h2 class="h5">Weekly bills</h2><div class="table-responsive"><table class="table table-sm">
+<thead><tr><th>Member</th><th>Tiffin quantity</th><th>Amount</th><th>Payment</th><th></th></tr></thead><tbody>
+{% for item in summary %}<tr><td>{{ item.member.name }}</td><td>{{ item.orders }}</td><td>₹{{ item.amount|money }}</td><td>{{ item.payment_status }}</td>
+<td>{% if current_user.role == 'admin' and item.payment_status != 'paid' and not current_week %}<form method="post" action="{{ url_for('main.mark_paid', member_id=item.member.id) }}"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="week_start" value="{{ week_start }}"><input type="hidden" name="week_end" value="{{ week_end }}"><button class="btn btn-sm btn-outline-success">Mark paid</button></form>{% endif %}</td></tr>{% else %}<tr><td colspan="5">No orders recorded.</td></tr>{% endfor %}
+</tbody></table></div></div></div></div>
+<div class="card card-body mt-3"><h2 class="h5">This week's orders</h2><div class="table-responsive"><table class="table table-sm"><thead><tr><th>Member</th><th>Date</th><th>Qty</th><th>Price</th><th>Status</th><th></th></tr></thead><tbody>
+{% for o in orders %}<tr><td>{{ o.member.name }}</td><td>{{ o.order_date }}</td><td>{{ o.quantity }}</td><td>₹{{ o.unit_price }}</td><td>{{ o.status }}</td><td>{% if o.status == 'active' and (current_user.role == 'admin' or o.member_id == current_user.id) %}<form method="post" action="{{ url_for('main.cancel_order', order_id=o.id) }}"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button class="btn btn-sm btn-outline-danger">Cancel</button></form>{% endif %}</td></tr>{% else %}<tr><td colspan="6">No orders.</td></tr>{% endfor %}
+</tbody></table></div><div class="d-flex gap-2">{% if pagination.has_prev %}<a href="{{ url_for('main.dashboard', week=week_start, page=pagination.prev_num) }}">Previous page</a>{% endif %}<span>Page {{ pagination.page }} of {{ pagination.pages or 1 }}</span>{% if pagination.has_next %}<a href="{{ url_for('main.dashboard', week=week_start, page=pagination.next_num) }}">Next page</a>{% endif %}</div></div>{% endblock %}
+

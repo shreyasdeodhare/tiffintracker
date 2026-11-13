@@ -1,0 +1,14 @@
+{% extends "base.html" %}{% block content %}
+<h1 class="h3">Operations and reconciliation</h1>
+<form method="get" class="d-flex gap-2 mb-3"><label for="week">Week containing</label><input id="week" type="date" name="week" value="{{ reconciliation.week_start }}" required><button class="btn btn-primary btn-sm">Inspect</button></form>
+<div class="card card-body mb-3"><h2 class="h5">Financial checks</h2>
+<p>{{ reconciliation.week_start }} to {{ reconciliation.week_end }} · {{ reconciliation.active_records }} active order records · {{ reconciliation.tiffin_quantity }} tiffins · INR {{ reconciliation.amount }}</p>
+<p>Aggregation and payment consistency: <strong>{{ 'PASS' if reconciliation.financially_consistent else 'DISCREPANCY — investigate before billing' }}</strong></p>
+<p>Potential repeated-order groups: {{ reconciliation.potential_duplicate_groups }}. These may be intentional; no automatic correction is made.</p>
+<p>Email records needing reconciliation: {{ reconciliation.email_reconciliation_count }}. Check provider delivery evidence before retrying unknown or interrupted sends.</p>
+<details><summary>Financial details (IDs only)</summary><pre>{{ reconciliation | tojson(indent=2) }}</pre></details></div>
+<div class="card card-body"><h2 class="h5">Tracking components</h2>
+<p>State: <strong>{{ tracking.state }}</strong></p><p>Fresh heartbeats show component activity. They do not prove upstream delivery or interpretation of a genuine order. No new messages can also mean a quiet group.</p>
+<pre>{{ tracking | tojson(indent=2) }}</pre>
+<p>Host backup age, disk space, certificate expiry, resource use and external alert delivery require host monitoring; they are not established by this page or the public health endpoint.</p></div>
+{% endblock %}

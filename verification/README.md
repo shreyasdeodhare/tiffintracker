@@ -1,0 +1,9 @@
+# Final audit reproduction harness
+
+These are the actual 12 November 2026 audit harnesses, not application startup or deployment scripts. They contain deployment-specific paths and explicitly named disposable databases. Review them before execution; tests refuse to overwrite named restore/performance databases, and previously created databases may still exist for evidence retention. Do not blindly rerun or drop databases.
+
+`tests.sh` runs the existing isolated PostgreSQL suite, compile/Ruff/npm gates, mocked concurrent outbox check and production Compose validation. Its source archive and verification-venv paths refer to the audited server. `baseline.sh` is read-only production inspection. `restore.py` takes a consistent read-only snapshot, exports a protected dump and restores only a distinctly named test database. `recovery.sh` and `auth.mjs` validate the installed native backup and restored auth decryption without connecting WhatsApp. `live.sh`/`live.py` perform read-only rendering, security/log checks and scoped timing; the privileged request context deliberately does not establish browser password login. `extra.sh` runs controlled isolated benchmarks and restores a dump created by the installed backup script.
+
+Run only in an authorized operator environment with PostgreSQL client tools, the verification Python environment and locked bridge dependencies. No real secrets are embedded. Recovery decryption reads the existing protected environment only into a child process and never prints the key. Keep generated dumps on the protected server; they must not enter the source package. Do not use these helpers to introduce a second app container or connected WhatsApp session.
+
+Evidence is in `evidence/` at the source-package root and the final report. No harness performs the pending genuine-order test, browser password login or future Friday publication acceptance.

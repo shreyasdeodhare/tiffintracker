@@ -1,0 +1,33 @@
+READONLY_ADMIN_RENDER_PASS /admin/orders
+READONLY_ADMIN_RENDER_PASS /admin/operations
+READONLY_ADMIN_RENDER_PASS /admin/whatsapp
+READONLY_ADMIN_RENDER_PASS /my/counts
+READONLY_ADMIN_RENDER_PASS /admin/export.xlsx
+READONLY_ADMIN_RENDER_PASS /admin/whatsapp/export.xlsx
+READONLY_ADMIN_RENDER_PASS /admin/participants/1
+READONLY_ADMIN_RENDER_PASS /admin/whatsapp/messages/1
+FRESH_HEARTBEAT receiver 2.56
+FRESH_HEARTBEAT worker 0.74
+LIVE_ORDER_COUNT 0
+LIVE_REVIEW_COUNT 1
+LIVE_PENDING_ERROR_COUNT 0
+LIVE_PUBLICATION_COUNT 0
+LIVE_DAILY_TOTALS {'records': 0, 'quantity': 0, 'amount': Decimal('0.00')}
+LIVE_PROVISIONAL True
+WEEKLY_PUBLISHING_ENABLED
+READ_ONLY_ADMIN_RENDER_AND_WORKBOOK_REOPEN_TIMINGS {"/admin/orders": {"samples": 3, "min_ms": 18.87, "median_ms": 37.76, "max_ms": 49.25}, "/admin/whatsapp/export.xlsx": {"samples": 3, "min_ms": 10.09, "median_ms": 26.89, "max_ms": 64.63}}
+PRODUCTION_RENDER_SMOKE_COMPLETE_NO_BUSINESS_OR_PASSWORD_WRITES
+LOG_REVIEW {"lines": 123, "component_exit_lines": 0, "processing_errors": 0, "publication_storage_errors": 0, "known_secret_leaks": 0}
+/auth/login 200 0.006281s
+/admin/orders 302 0.005160s
+/admin/operations 302 0.017934s
+/admin/whatsapp/export.xlsx 302 0.010003s
+CSRF_UNTOKENED_POST_REJECTED_400
+HTTP/1.1 200 OK
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Content-Security-Policy: default-src 'self'; style-src 'self' https://cdn.jsdelivr.net; script-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+Strict-Transport-Security: max-age=31536000
+Set-Cookie: session=[redacted]; Secure; HttpOnly; Path=/; SameSite=Lax
+cpu=0.58% memory=306MiB / 512MiB pids=19
+FINAL_LIVE_ACCEPTANCE_READ_ONLY_CHECKS_COMPLETE

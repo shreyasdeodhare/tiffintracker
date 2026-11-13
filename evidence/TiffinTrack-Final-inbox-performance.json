@@ -1,0 +1,19 @@
+{
+  "scope": "Synthetic PostgreSQL durable-inbox worker on host; excludes actual WhatsApp delivery, TLS and container limits",
+  "participants": 20,
+  "transport_deliveries": 200,
+  "unique_events": 100,
+  "original_orders": 60,
+  "edits": 20,
+  "cancellations": 20,
+  "final_active_orders": 40,
+  "final_tiffin_quantity": 100,
+  "duplicate_deliveries_ignored": 100,
+  "errors": 0,
+  "duration_seconds": 1.756,
+  "events_per_second": 56.94,
+  "p50_ms": 13.49,
+  "p95_ms": 32.42,
+  "p99_ms": 38.52,
+  "max_rss_kib": 82836
+}

@@ -1,0 +1,72 @@
+{
+  "scope": "Flask test client on host; PostgreSQL real; excludes TLS/Gunicorn/network",
+  "dataset": {
+    "registered_users": 1000,
+    "seed_orders": 13986
+  },
+  "db_connections_before": 1,
+  "max_rss_kib": 299380,
+  "cpu_user_seconds": 11.448689,
+  "results": {
+    "login": {
+      "requests": 30,
+      "concurrency": 5,
+      "duration_seconds": 0.742,
+      "throughput_per_second": 40.44,
+      "errors": 0,
+      "p50_ms": 113.46,
+      "p95_ms": 121.31,
+      "p99_ms": 124.02
+    },
+    "member_dashboard": {
+      "requests": 30,
+      "concurrency": 5,
+      "duration_seconds": 0.29,
+      "throughput_per_second": 103.43,
+      "errors": 0,
+      "p50_ms": 43.52,
+      "p95_ms": 82.74,
+      "p99_ms": 84.25
+    },
+    "participant_dashboard": {
+      "requests": 30,
+      "concurrency": 5,
+      "duration_seconds": 1.842,
+      "throughput_per_second": 16.28,
+      "errors": 0,
+      "p50_ms": 283.61,
+      "p95_ms": 345.37,
+      "p99_ms": 345.55
+    },
+    "order_creation": {
+      "requests": 30,
+      "concurrency": 5,
+      "duration_seconds": 0.314,
+      "throughput_per_second": 95.4,
+      "errors": 0,
+      "p50_ms": 46.45,
+      "p95_ms": 82.46,
+      "p99_ms": 82.52
+    },
+    "weekly_aggregation": {
+      "requests": 30,
+      "concurrency": 5,
+      "duration_seconds": 0.204,
+      "throughput_per_second": 147.08,
+      "errors": 0,
+      "p50_ms": 25.79,
+      "p95_ms": 37.73,
+      "p99_ms": 42.85
+    },
+    "excel_export": {
+      "requests": 5,
+      "concurrency": 1,
+      "duration_seconds": 3.526,
+      "throughput_per_second": 1.42,
+      "errors": 0,
+      "p50_ms": 705.25,
+      "p95_ms": 716.86,
+      "p99_ms": 716.86
+    }
+  }
+}
