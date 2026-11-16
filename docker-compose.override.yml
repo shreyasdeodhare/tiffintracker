@@ -1,0 +1,3 @@
+services:
+  tiffintrack:
+    image: tiffintrack:portions-20261116

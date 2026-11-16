@@ -34,7 +34,9 @@ def ensure_new_source(event):
         raise ValueError("This source message already created an order")
 
 
-def approve_allocations(event: WAEvent, allocations: list[tuple[int, int]], actor_id: int) -> None:
+def approve_allocations(
+    event: WAEvent, allocations: list[tuple[int, int]], actor_id: int, portion="standard"
+) -> None:
     """Resolve an explicit multi-person request atomically, without name guessing."""
     if event.state != "review" or event.kind != "original":
         raise ValueError("Only unresolved original messages can be split")
@@ -44,6 +46,12 @@ def approve_allocations(event: WAEvent, allocations: list[tuple[int, int]], acto
         raise ValueError("Choose 2–10 different members for a split")
     ensure_new_source(event)
     validate_order_day(event.order_date)
+    from app.application.meal_orders import require_current_pricing
+    from app.domain.meal_items import portion_price
+
+    price = portion_price(portion, current_app.config)
+    if portion != "standard":
+        require_current_pricing(event.order_date)
     for member_id, quantity in sorted(allocations):
         member = lock_member(member_id)
         if not member or member.role != "member" or not member.is_active or not 1 <= quantity <= 20:
@@ -54,7 +62,7 @@ def approve_allocations(event: WAEvent, allocations: list[tuple[int, int]], acto
             member_id=member_id,
             order_date=event.order_date,
             quantity=quantity,
-            unit_price=Decimal(str(current_app.config["TIFFIN_PRICE"])),
+            unit_price=price,
             source="whatsapp",
             status="active",
         )
@@ -65,7 +73,13 @@ def approve_allocations(event: WAEvent, allocations: list[tuple[int, int]], acto
         audit(
             event,
             "created",
-            {"member_id": member_id, "quantity": quantity, "split": True},
+            {
+                "member_id": member_id,
+                "quantity": quantity,
+                "split": True,
+                "portion": portion,
+                "unit_price": str(price),
+            },
             actor_id,
             order,
         )
@@ -84,6 +98,7 @@ def apply_event(
     member_id=None,
     target_id=None,
     participant_id=None,
+    portion=None,
 ) -> None:
     if event.state != "review":
         raise ValueError("This message decision is already final")
@@ -114,69 +129,134 @@ def apply_event(
     quantity = event.quantity if quantity is None else quantity
     validate_order_day(event.order_date)
     ensure_mutable(chosen_member, event.order_date)
+    from app.application.meal_orders import cancel_groups, create_groups, replace_groups
+    from app.domain.meal_items import MealItem, MealRequest
+    from app.domain.parsing import classify
+
+    interpretation = classify(event.body)
+    request = (
+        MealRequest(interpretation.items, interpretation.descriptions)
+        if interpretation.items
+        else None
+    )
+    if action == "cancel":
+        request = None
+    elif portion is not None:
+        if actor_id is None or quantity is None:
+            raise ValueError("Portion override requires administrator confirmation and quantity")
+        request = MealRequest((MealItem(quantity, portion),))
+    elif actor_id and request is None and action == "order":
+        import re
+
+        if re.search(r"\b(full|half)\b", event.body, re.IGNORECASE):
+            raise ValueError(
+                "Select full or half explicitly before confirming unclear portion wording"
+            )
+    if request is not None:
+        from app.application.meal_orders import require_current_pricing
+
+        require_current_pricing(event.order_date)
+    if request is not None and quantity != request.quantity:
+        raise ValueError(
+            "Confirmed quantity differs from item quantities; review the exact portions"
+        )
     if action == "order":
         ensure_new_source(event)
         if event.kind != "original":
             raise ValueError("Edits cannot create a second order")
         if quantity is None or not 1 <= quantity <= 20:
             raise ValueError("Quantity must be 1–20")
-        order = Order(
-            member_id=chosen_member,
-            participant_id=participant.id,
-            category=(
-                "dinner"
-                if "dinner" in event.body.casefold()
-                else "lunch"
-                if "lunch" in event.body.casefold()
-                else "unspecified"
-            ),
-            order_date=event.order_date,
-            quantity=quantity,
-            unit_price=Decimal(str(current_app.config["TIFFIN_PRICE"])),
-            source="whatsapp",
-            status="active",
-        )
-        db.session.add(order)
-        db.session.flush()
-        event.order_id = order.id
-        audit(
-            event,
-            "created",
-            {"quantity": quantity, "member_id": chosen_member, "date": str(event.order_date)},
-            actor_id,
-            order,
-        )
+        if request is not None:
+            create_groups(event, request, participant, actor_id, audit)
+        else:
+            order = Order(
+                member_id=chosen_member,
+                participant_id=participant.id,
+                category=(
+                    "dinner"
+                    if "dinner" in event.body.casefold()
+                    else "lunch"
+                    if "lunch" in event.body.casefold()
+                    else "unspecified"
+                ),
+                order_date=event.order_date,
+                quantity=quantity,
+                unit_price=Decimal(str(current_app.config["TIFFIN_PRICE"])),
+                source="whatsapp",
+                status="active",
+            )
+            db.session.add(order)
+            db.session.flush()
+            event.order_id = order.id
+            audit(
+                event,
+                "created",
+                {"quantity": quantity, "member_id": chosen_member, "date": str(event.order_date)},
+                actor_id,
+                order,
+            )
     elif action in {"modify", "cancel"}:
         candidates = target_orders(event)
         if target_id is not None:
             candidates = [order for order in candidates if order.id == target_id]
-        if len(candidates) != 1:
+        if not candidates:
             raise ValueError("A unique active source order is required; select an exact target")
-        order = candidates[0]
-        if order.participant_id != participant.id:
-            raise ValueError("Source order belongs to a different member")
-        validate_order_day(order.order_date)
-        ensure_mutable(order.member_id, order.order_date)
-        # A late revision must not overwrite a newer applied revision.
-        later = InboxRepository(db.session).later_change(event, order.id)
-        if later and actor_id is None:
-            raise ValueError("Out-of-order change requires review")
-        before = {"quantity": order.quantity, "status": order.status}
-        if action == "modify":
-            if quantity is None or not 1 <= quantity <= 20:
-                raise ValueError("Quantity must be 1–20")
-            order.quantity = quantity
+        for order in candidates:
+            if order.participant_id != participant.id:
+                raise ValueError("Source order belongs to a different member")
+            validate_order_day(order.order_date)
+            ensure_mutable(order.member_id, order.order_date)
+            if InboxRepository(db.session).later_change(event, order.id) and actor_id is None:
+                raise ValueError("Out-of-order change requires review")
+        if action == "cancel" and len(candidates) > 1 and target_id is None:
+            cancel_groups(event, candidates, actor_id, audit)
+        elif (
+            action == "modify"
+            and request is not None
+            and event.kind == "edit"
+            and target_id is None
+        ):
+            replace_groups(event, request, candidates, participant, actor_id, audit)
         else:
-            order.status = "cancelled"
-            order.cancelled_at = utcnow()
-        event.order_id = order.id
-        audit(
-            event,
-            action,
-            {"before": before, "after": {"quantity": order.quantity, "status": order.status}},
-            actor_id,
-            order,
-        )
+            if len(candidates) != 1:
+                raise ValueError("A unique active source order is required; select an exact target")
+            order = candidates[0]
+            before = {
+                "quantity": order.quantity,
+                "status": order.status,
+                "unit_price": str(order.unit_price),
+            }
+            if action == "modify":
+                if quantity is None or not 1 <= quantity <= 20:
+                    raise ValueError("Quantity must be 1–20")
+                if request is not None:
+                    from app.domain.meal_items import grouped_items, portion_price
+
+                    groups = grouped_items(request.items)
+                    if len(groups) != 1:
+                        raise ValueError("Mixed portions need an exact source-message edit")
+                    (chosen_portion, meal), _ = next(iter(groups.items()))
+                    order.unit_price = portion_price(chosen_portion, current_app.config)
+                    order.category = meal
+                order.quantity = quantity
+            else:
+                order.status = "cancelled"
+                order.cancelled_at = utcnow()
+            event.order_id = order.id
+            audit(
+                event,
+                action,
+                {
+                    "before": before,
+                    "after": {
+                        "quantity": order.quantity,
+                        "status": order.status,
+                        "unit_price": str(order.unit_price),
+                    },
+                },
+                actor_id,
+                order,
+            )
     else:
         raise ValueError("Choose order, modify or cancel explicitly")
     event.state = "applied"
@@ -187,7 +267,7 @@ def apply_event(
     )
 
 
-def approve_participant_allocations(event, allocations, actor_id):
+def approve_participant_allocations(event, allocations, actor_id, portion="standard"):
     if event.state != "review" or event.kind != "original":
         raise ValueError("Only unresolved original messages can be split")
     if not 2 <= len(allocations) <= 10 or len({identity for identity, _ in allocations}) != len(
@@ -196,6 +276,12 @@ def approve_participant_allocations(event, allocations, actor_id):
         raise ValueError("Choose 2–10 different participants")
     ensure_new_source(event)
     validate_order_day(event.order_date)
+    from app.application.meal_orders import require_current_pricing
+    from app.domain.meal_items import portion_price
+
+    price = portion_price(portion, current_app.config)
+    if portion != "standard":
+        require_current_pricing(event.order_date)
     repo = ParticipantRepository(db.session)
     participants = {identity: repo.get(identity) for identity, _ in allocations}
     if any(p is None for p in participants.values()):
@@ -222,7 +308,7 @@ def approve_participant_allocations(event, allocations, actor_id):
             participant_id=identity,
             order_date=event.order_date,
             quantity=quantity,
-            unit_price=Decimal(str(current_app.config["TIFFIN_PRICE"])),
+            unit_price=price,
             source="whatsapp",
             status="active",
         )
@@ -233,7 +319,13 @@ def approve_participant_allocations(event, allocations, actor_id):
         audit(
             event,
             "created",
-            {"participant_id": identity, "quantity": quantity, "split": True},
+            {
+                "participant_id": identity,
+                "quantity": quantity,
+                "split": True,
+                "portion": portion,
+                "unit_price": str(price),
+            },
             actor_id,
             order,
         )

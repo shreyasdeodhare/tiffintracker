@@ -83,6 +83,7 @@ def review(
     actor_id,
     participant_id=None,
     participant_allocations=None,
+    portion=None,
 ):
     connection_lock()
     repo = WhatsAppAdminRepository(db.session)
@@ -106,14 +107,25 @@ def review(
             db.session.flush()
         if day is not None:
             event.order_date = day
+        if action == "split" and portion is None:
+            import re
+
+            if re.search(r"\b(full|half)\b", event.body, re.IGNORECASE):
+                raise ValueError(
+                    "Choose the confirmed full/half portion for every split allocation"
+                )
         if action == "split" and participant_allocations:
             from app.application.order_decisions import approve_participant_allocations
 
-            approve_participant_allocations(event, participant_allocations, actor_id)
+            approve_participant_allocations(
+                event, participant_allocations, actor_id, portion or "standard"
+            )
         elif action == "split":
-            approve_allocations(event, allocations, actor_id)
+            approve_allocations(event, allocations, actor_id, portion or "standard")
         else:
-            apply_event(event, action, quantity, actor_id, member_id, target_id, participant_id)
+            apply_event(
+                event, action, quantity, actor_id, member_id, target_id, participant_id, portion
+            )
     db.session.commit()
 
 

@@ -1,10 +1,12 @@
 # TiffinTrack
 
+> 16 November 2026: full/half tiffin pricing and itemized WhatsApp orders are deployed as `tiffintrack:portions-20261116`. Full = INR 80, half = INR 60. See [portion rollout](docs/FULL-HALF-ROLLOUT-2026-11-16.md). No schema migration or resource/port change was made. Older acceptance documents below remain historical records.
+
 [Complete file reference with purposes and full source listings](TiffinTrack%20Complete%20File%20Reference.pdf)
 
 > Final acceptance: the stabilization image remains running; this audit introduced no runtime change or restart. See [FINAL-ACCEPTANCE.md](FINAL-ACCEPTANCE.md) and [ACCEPTANCE-MATRIX.csv](ACCEPTANCE-MATRIX.csv) for evidence and pending genuine business checks. Active guidance: [ACCESS.md](ACCESS.md), [RECOVERY.md](RECOVERY.md), [DOMAIN-READINESS.md](DOMAIN-READINESS.md). Dated reports remain historical evidence.
 
-Tiffin order tracking for a selected existing WhatsApp group, with manual corrections, participant reports and Excel exports. The deployed Compose image is `tiffintrack:stabilization-20261112`. It retains the layered architecture and schema `0005_participants`; no migration was introduced.
+Tiffin order tracking for a selected existing WhatsApp group, with manual corrections, participant reports and Excel exports. The deployed Compose override selects `tiffintrack:portions-20261116`; the base Compose configuration is preserved. It retains the layered architecture and schema `0005_participants`; no migration was introduced.
 
 ## Active workflow
 
@@ -26,7 +28,7 @@ The database stores an immutable snapshot and bounded message parts in a durable
 
 One Docker Compose application container supervises Gunicorn, the inbox worker and Node connector. PostgreSQL, Nginx and cron are host services. Resource limits remain 512 MiB memory, 1.5 CPU and 128 PIDs. The container has a read-only root, temporary `/tmp`, dropped capabilities, init and bounded logs. Application port 8000 is bound only to host `127.0.0.1:8087`; internal bridge port 8090 is not published.
 
-Current deployed release is `tiffintrack:stabilization-20261112`, approved and verified on 12 November 2026. Private access: https://192.168.1.101/admin/orders on the server LAN. Public domain access is deferred. The temporary server certificate requires trust and renewal. Do not assume a localhost SSH tunnel remains running.
+Current deployed release is `tiffintrack:portions-20261116`, verified on 16 November 2026. Private access: https://192.168.1.101/admin/orders on the server LAN. Public domain access is deferred. The temporary server certificate requires trust and renewal. Do not assume a localhost SSH tunnel remains running.
 
 ## Configuration, maintenance and verification
 

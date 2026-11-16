@@ -1,0 +1,18 @@
+{
+  "app/__init__.py": "a150130dc95d45b617d197118448459be26eec6a3a3babe31ddfe8c315ee43e1",
+  "app/application/meal_orders.py": "525907d797d56eda9abb023ee427b5360727ac399d757e75655ebd1fe9c0b5a5",
+  "app/application/order_decisions.py": "7181ccba0f253e0ce466f44f1bd4987a60c9e59fa191dfab8298c293499ce3c2",
+  "app/application/orders.py": "3372a2afb113e44078d1b52ed7101655f257efcee316414659c86a30cb75ae4e",
+  "app/application/reprocess_meals.py": "b8b4fa71e8df1c7b465cac6d97a0d37d58cd17e4f53266a85510611d4e6234b9",
+  "app/application/whatsapp_admin.py": "20acb39f594b484aaba07074b8831a30c4de3b61efb557d344d98f80fdeb4f84",
+  "app/domain/meal_items.py": "f12d86cc4d715ec2c2019e093bb8393a8028b20f2675b50c49c4225360a7286b",
+  "app/domain/parsing.py": "3f40e27a0e6d06f0780793903aca0c8d34da72ebbaad98a11574cab0d6257bb8",
+  "app/infrastructure/meal_orders.py": "ace2ba7b44c46df5611165e6f1c961313501bc14cdda8cbf9de094faec50354d",
+  "app/presentation/report_routes.py": "32ac263c3604b5b8f88af52eebd2d36efa0e9f8d66d5f110520bf0c7071876fe",
+  "app/routes.py": "7e31e5fd278d49076e1699526ef293d8f2115cf7a8820c98a6ac75f2eba7b85e",
+  "app/templates/order_reports.html": "4691c24d2938bc8d0d55fb7cea7401ac0b2a095eaad80991695206e2937ba2e2",
+  "app/templates/whatsapp_detail.html": "c90705a91396248d8aefc2012843bad15eb7c57aa11be5b29f8dd23e92ab96a1",
+  "app/whatsapp_routes.py": "75128c05f5405f1f97579b8a71e44e82500629e25bdba8866fc88a5e4999f406",
+  "scripts/reprocess_today_meals.py": "4adf7cf3eaac6f17b0e4d23207a99e67d12a6c51c9cc9fc95ddf9784222aff6a",
+  "tests/test_meal_items.py": "072f9e900b33f8cce8037593db72aa455c1aa77b165f598f7562fb0b3c9f9c4c"
+}

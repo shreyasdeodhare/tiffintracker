@@ -151,6 +151,7 @@ def review(event_id):
             current_user.id,
             number("participant_id"),
             participants,
+            request.form.get("portion") or None,
         )
         flash("Message decision saved.", "success")
     except BusinessError as exc:

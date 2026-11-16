@@ -71,6 +71,7 @@ def add_order():
             key,
             request.form.get("category", "unspecified"),
             current_user.id,
+            portion=request.form.get("portion", "standard"),
         )
         flash("Order recorded.", "success")
     except FinalizedPeriod as exc:

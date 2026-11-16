@@ -1,9 +1,8 @@
 """Manual order/payment use cases: rules and transactions outside HTTP handlers."""
 
-from decimal import Decimal
-
 from flask import current_app
 
+from app.domain.meal_items import portion_price
 from app.domain.orders import BusinessError, validate_category, validate_day, validate_quantity
 from app.extensions import db
 from app.infrastructure.core import CoreRepository
@@ -13,11 +12,22 @@ from app.services import completed_week, ensure_mutable, local_today, lock_membe
 
 
 def create_manual(
-    member_id, day, quantity, submission_key=None, category="unspecified", actor_id=None
+    member_id,
+    day,
+    quantity,
+    submission_key=None,
+    category="unspecified",
+    actor_id=None,
+    portion="standard",
 ):
     validate_day(day, local_today())
     validate_quantity(quantity)
     validate_category(category)
+    price = portion_price(portion, current_app.config)
+    if portion != "standard":
+        from app.application.meal_orders import require_current_pricing
+
+        require_current_pricing(day)
     repo = CoreRepository(db.session)
     member = lock_member(member_id)
     if not member or not member.is_active or member.role != "member":
@@ -31,6 +41,8 @@ def create_manual(
             category,
         ):
             raise BusinessError("Submission key was already used for different order details", 409)
+        if portion != "standard" and previous.unit_price != price:
+            raise BusinessError("Submission key conflicts with another portion price", 409)
         db.session.rollback()
         return False
     participant = ParticipantRepository(db.session).for_member(member_id)
@@ -43,7 +55,7 @@ def create_manual(
             order_date=day,
             quantity=quantity,
             category=category,
-            unit_price=Decimal(str(current_app.config["TIFFIN_PRICE"])),
+            unit_price=price,
             status="active",
             submission_key=submission_key,
         )
@@ -51,7 +63,12 @@ def create_manual(
     repo.audit(
         order,
         "created",
-        {"quantity": quantity, "price": str(order.unit_price), "date": str(day)},
+        {
+            "quantity": quantity,
+            "price": str(order.unit_price),
+            "date": str(day),
+            "portion": portion,
+        },
         actor_id,
     )
     db.session.commit()
@@ -117,10 +134,17 @@ def record_payment(member_id, start, end):
     db.session.commit()
 
 
-def guest_manual(participant_id, day, quantity, category, submission_key, actor_id=None):
+def guest_manual(
+    participant_id, day, quantity, category, submission_key, actor_id=None, portion="standard"
+):
     validate_day(day, local_today())
     validate_quantity(quantity)
     validate_category(category)
+    price = portion_price(portion, current_app.config)
+    if portion != "standard":
+        from app.application.meal_orders import require_current_pricing
+
+        require_current_pricing(day)
     participants = ParticipantRepository(db.session)
     participant = participants.get(participant_id)
     if participant is None:
@@ -144,6 +168,8 @@ def guest_manual(participant_id, day, quantity, category, submission_key, actor_
             category,
         ):
             raise BusinessError("Submission key conflicts with another order", 409)
+        if portion != "standard" and previous.unit_price != price:
+            raise BusinessError("Submission key conflicts with another portion price", 409)
         db.session.rollback()
         return
     ensure_mutable(participant.member_id, day)
@@ -154,7 +180,7 @@ def guest_manual(participant_id, day, quantity, category, submission_key, actor_
             order_date=day,
             quantity=quantity,
             category=category,
-            unit_price=Decimal(str(current_app.config["TIFFIN_PRICE"])),
+            unit_price=price,
             status="active",
             source="manual",
             submission_key=submission_key,
@@ -163,7 +189,12 @@ def guest_manual(participant_id, day, quantity, category, submission_key, actor_
     CoreRepository(db.session).audit(
         order,
         "created",
-        {"quantity": quantity, "price": str(order.unit_price), "date": str(day)},
+        {
+            "quantity": quantity,
+            "price": str(order.unit_price),
+            "date": str(day),
+            "portion": portion,
+        },
         actor_id,
     )
     db.session.commit()

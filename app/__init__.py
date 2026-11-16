@@ -32,6 +32,8 @@ def create_app(test_config=None):
         PERMANENT_SESSION_LIFETIME=timedelta(hours=8),
         WTF_CSRF_TIME_LIMIT=3600,
         TIFFIN_PRICE=os.getenv("TIFFIN_PRICE", "80.00"),
+        FULL_TIFFIN_PRICE=os.getenv("FULL_TIFFIN_PRICE", "80.00"),
+        HALF_TIFFIN_PRICE=os.getenv("HALF_TIFFIN_PRICE", "60.00"),
         APP_TIMEZONE=os.getenv("APP_TIMEZONE", "Asia/Kolkata"),
         MAX_CONTENT_LENGTH=1024 * 1024,
         WA_BRIDGE_TOKEN=os.getenv("WA_BRIDGE_TOKEN", ""),
@@ -57,6 +59,10 @@ def create_app(test_config=None):
             raise ValueError
     except (ZoneInfoNotFoundError, ValueError, InvalidOperation) as exc:
         raise RuntimeError("Invalid APP_TIMEZONE or TIFFIN_PRICE") from exc
+    from .domain.meal_items import portion_price
+
+    for portion in ("standard", "full", "half"):
+        portion_price(portion, app.config)
     if app.config["TRUST_PROXY"]:
         app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=0, x_port=0, x_prefix=0)
     db.init_app(app)

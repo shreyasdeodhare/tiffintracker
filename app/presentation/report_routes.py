@@ -113,6 +113,7 @@ def new_order():
             request.form.get("category", "unspecified"),
             key,
             current_user.id,
+            portion=request.form.get("portion", "standard"),
         )
     except (ValueError, KeyError) as exc:
         abort(getattr(exc, "status", 400), str(exc))

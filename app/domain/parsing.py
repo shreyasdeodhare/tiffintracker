@@ -2,6 +2,8 @@ import re
 import unicodedata
 from dataclasses import dataclass
 
+from .meal_items import MealItem, parse_meal_request
+
 
 @dataclass(frozen=True)
 class Interpretation:
@@ -10,6 +12,8 @@ class Interpretation:
     quantity: int | None
     reason: str
     day_offset: int = 0
+    items: tuple[MealItem, ...] = ()
+    descriptions: tuple[tuple[int, str], ...] = ()
 
 
 NUMBERS = {
@@ -39,10 +43,10 @@ FOOD = r"(?:tiff[ia]ns?|tifins?|lunch(?:es)?|dinners?|dab[b]?as?|टिफिन
 
 
 def classify(body: str) -> Interpretation:
-    text = unicodedata.normalize("NFC", body).strip().casefold()
-    text = re.sub(r"\s+", " ", text)
+    raw = unicodedata.normalize("NFC", body).strip().casefold()
     for word, value in NUMBERS.items():
-        text = re.sub(r"(?<!\w)" + re.escape(word) + r"(?!\w)", str(value), text)
+        raw = re.sub(r"(?<!\w)" + re.escape(word) + r"(?!\w)", str(value), raw)
+    text = re.sub(r"\s+", " ", raw)
 
     def answer(category, confidence="low", quantity=None, reason="", offset=0):
         return Interpretation(category, confidence, quantity, reason or category, offset)
@@ -92,6 +96,18 @@ def classify(body: str) -> Interpretation:
             quantity if 1 <= quantity <= 20 else None,
             "Explicit quantity replacement; unique target required",
             offset,
+        )
+    meal_text = re.sub(r"\b(?:for )?(?:today|tomorrow|yesterday)\b|आज", "", raw).strip()
+    request = parse_meal_request(meal_text)
+    if request is not None:
+        return Interpretation(
+            "order",
+            "high",
+            request.quantity,
+            "Explicit meal quantities; dish descriptions are not extra meals",
+            offset,
+            request.items,
+            request.descriptions,
         )
     order = re.fullmatch(
         rf"(?:(?:i need|i want|please|pls|plz|send|for me|mere liye|mujhe|मेरे लिए|मुझे) )?(\d{{1,2}})\s*{FOOD}(?: (?:for (?:lunch|dinner)|for me|please|pls|chahiye|bhej do|चाहिए))?",
