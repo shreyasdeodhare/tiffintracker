@@ -1,6 +1,6 @@
 # Full/half pricing and multi-line order rollout - 16 November 2026
 
-Status: deployed and healthy as tiffintrack:portions-20261116. Source changes are on the local feature/full-half-multiline-20261116 branch. This task did not publish another GitHub commit.
+Status: deployed and healthy as tiffintrack:portions-20261116. Source changes were prepared on feature/full-half-multiline-20261116. Production deployment and GitHub source publication are separate operations; publication follows explicit user authorization.
 
 ## Confirmed business rules
 
